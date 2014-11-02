@@ -6,7 +6,7 @@
     <groupId>katopari</groupId>
     <artifactId>tenttiarkisto</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>tenttiarkisto</name>
     <description>Tenttiarkisto k�pistelytenteille</description>
