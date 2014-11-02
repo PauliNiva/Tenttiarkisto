@@ -9,7 +9,7 @@ public class DefaultController {
     
     @RequestMapping("/")
     String home() {
-        return "Hello World!";
+        return "Hello World ja automaattinen heroku päivityskin toimii";
     }
     
 }
