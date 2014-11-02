@@ -19,7 +19,8 @@ after_success:
 deploy:
 	provider: heroku
 		api_key:
-			secure: awRwzRjrea/D6oxm6JLlMtxQsDpuNR96YTH2frPpVuDbhPM9iq3cfpxsbm6f8+6qRnzGt30ufTyo3fiBOVLSvAxo/JPykp+Vhutu6WJnb65JzGdYTFL2CQ8gB1QvlBHp3ooBQT5/l5CvsoYSwUN3JXt0Yl/56CtoW3NOBt2bNNE=
+		secure: awRwzRjrea/D6oxm6JLlMtxQsDpuNR96YTH2frPpVuDbhPM9iq3cfpxsbm6f8+6qRnzGt30ufTyo3fiBOVLSvAxo/JPykp+Vhutu6WJnb65JzGdYTFL2CQ8gB1QvlBHp3ooBQT5/l5CvsoYSwUN3JXt0Yl/56CtoW3NOBt2bNNE=
+	strategy: git
 	app: tenttiarkisto
 	on:
 	repo: Corvidian/tenttiarkisto
