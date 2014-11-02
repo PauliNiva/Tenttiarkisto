@@ -1,8 +1,6 @@
 language: java
 
-deploy:
-    provider: heroku
-    api_key: secure: "b+U3LO8k5bzcC8KLT0yoLwA52FWHwsWDyHYz6kd+VjC9h28lnwGyGXHVBKnP6niCI1rKfBHdYxqSa9OINY1XbtRHsm38jiXBro2A/Ggn5DgS3/CiyeI0xBbN8BOE0YjC3QSu2sbV3eojoXjAevdzXtRNcOOwmsogfju5nphqSXg="
+
 
 notifications:
 
