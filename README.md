@@ -7,4 +7,4 @@ Eli projektimme on tenttiarkiston tekeminen tietojenkäsittelytieteen tenttien a
 
 Linkki trelloon jossa userStoryt ja jota ajattelimme pääasiallisesti käyttää (githubin issueiden sijaan) projektin työskentelyvaiheiden koordinointiin: https://trello.com/b/rhDYdnjP/tenttiarkisto
 
-Heroku-linkki applikaatioon: https://aqueous-sierra-8429.herokuapp.com/
+Heroku-linkki applikaatioon: https://tenttiarkisto.herokuapp.com/
