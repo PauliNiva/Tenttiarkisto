@@ -8,19 +8,17 @@ notifications:
     use_notice: true
     skip_join: true
     template:
-    - "**"
-    - "%{message}"
-    - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{commit_message}"
+    - '**'
+    - '%{message}'
+    - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{commit_message}'
     - 'Build details : %{build_url}'
-    - "**"
+    - '**'
 after_success:
 - mvn clean cobertura:cobertura coveralls:cobertura
-
 deploy:
-	provider: heroku
-		api_key:
-		secure: awRwzRjrea/D6oxm6JLlMtxQsDpuNR96YTH2frPpVuDbhPM9iq3cfpxsbm6f8+6qRnzGt30ufTyo3fiBOVLSvAxo/JPykp+Vhutu6WJnb65JzGdYTFL2CQ8gB1QvlBHp3ooBQT5/l5CvsoYSwUN3JXt0Yl/56CtoW3NOBt2bNNE=
-	strategy: git
-	app: tenttiarkisto
-	on:
-	repo: Corvidian/tenttiarkisto
+  provider: heroku
+  api_key:
+    secure: ImQv/pKo56WlrIvHLiry3FzbK4Y5pOoktakaMdvFDIf7c3xDCxA6yEQhliNCZnT8DM+iwKIiTYAZG3pet/UwzD5voIvLfyLs93xDnr2i/A8K/XJ1R3o27Bc1PAGw4t2go5Fu90S7aFHnBX+lCa6MH8d31Ow6EgMFszfW5qHzOHA=
+  app: tenttiarkisto
+  on:
+    repo: Corvidian/tenttiarkisto
