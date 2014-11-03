@@ -18,6 +18,13 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+
+		  <script>
+		  $(function() {
+		    $( "#datepicker" ).datepicker();
+		  });
+		  </script>
+
 	</head>
 	<body>
 
@@ -53,7 +60,7 @@
 
 									<form method="POST" action="/tents">
 										<p><span>Kurssi</span><input type="text" name="kurssi"/></p>
-										<p><span>Päivämäärä</span><input type="text" name="pvm"/></p>
+										<p><span>Päivämäärä</span><input type="text" name="pvm" id="datepicker" /></p>
 										<p><span>Tyyppi</span>
 										<select name="tyyppi">
 										  <option>Kurssikoe</option>

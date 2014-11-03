@@ -2,14 +2,16 @@
 package tenttiarkisto.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
-@RestController
+@Controller
 public class DefaultController {
     
     @RequestMapping("/")
-    String home() {
-        return "Hello World!";
+    public String view(Model model) {
+	model.addAttribute("viesti", "gagaeeagf");
+        return "WEB-INF/views/index.jsp";
     }
     
 }
