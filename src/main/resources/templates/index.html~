@@ -1,6 +1,6 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Tenttiarkisto</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -28,7 +28,7 @@
 					<p>All your tents</p>
 				</header>
 				<footer>
-					<a href="#first" class="button scrolly">Proceed to second phase</a>
+					<a href="#lomake" class="button scrolly">Lisää uusi tentti</a>
 				</footer>
 			</section>
 			
@@ -36,55 +36,39 @@
 			<section id="first" class="main">
 				<header>
 					<div class="container">
-						<h2>Hello world</h2>
+						<h2>Tenttilistaus</h2>
 						
-						<!-- TEE TÄHÄN -->
-						<p th:text="#{hello}">Hello World Thymeleaf Offline!!</p>
+						<p>palvelimelta saatu teksti: ${viesti}</p>
 						
 					</div>
 				</header>
 				<div class="content dark style1 featured">
 					<div class="container">
 						<div class="row">
-							<div class="4u">
-								<section>
-									<header>
-										<h3>Gravida</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. 
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus 
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="4u">
-								<section>
-									<header>
-										<h3>Vivamus</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. 
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus 
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="4u">
-								<section>
-									<header>
-										<h3>Accumsan</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. 
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus 
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus.</p>
-								</section>
-							</div>
-						</div>
-						<div class="row">
 							<div class="12u">
-								<footer>
-									<a href="#second" class="button scrolly">Gravida tempor lacinia</a>
-								</footer>
+								<section id="lomake">
+									<header>
+										<h3>Lisää uusi tentti</h3>
+									</header>
+
+									<form method="POST" action="/tents">
+										<p><span>Kurssi</span><input type="text" name="kurssi"/></p>
+										<p><span>Päivämäärä</span><input type="text" name="pvm"/></p>
+										<p><span>Tyyppi</span>
+										<select name="tyyppi">
+										  <option>Kurssikoe</option>
+										  <option>Erilliskoe</option>
+										</select></p>
+										<p><span>Kieli<span>	
+										<select name="kieli">
+										  <option>Suomi</option>
+										  <option>English</option>
+										</select></p>
+										<p><span>Pitäjä</span><input type="text" name="pitaja"/></p>
+    										<p><span>Tiedosto</span><br/><input type="file" name="tiedosto" /></p>
+									    	<p><br/><input type="submit" value="Lähetä"/></p>
+									</form>
+								</section>
 							</div>
 						</div>
 					</div>
