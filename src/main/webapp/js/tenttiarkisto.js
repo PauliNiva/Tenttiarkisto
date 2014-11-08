@@ -6,5 +6,5 @@ $('a').click(function(){
 });
 
 $(function() {
-	$("#datepicker").datepicker();
+               $("#datepicker").datepicker({ dateFormat: "dd.mm.yy" }).val();
 });
