@@ -5,31 +5,30 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.URL;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
 public class Tentti extends AbstractPersistable<Long> {
 
-    @NotBlank
+    @NotNull
     @Temporal(TemporalType.DATE)
     private Date pvm;
 
     private String pitaja;
 
-    @NotBlank
+    @NotNull
     @ManyToOne
     private Kurssi kurssi;
 
-    @NotBlank
+    @NotNull
     @ManyToOne
     private Tyyppi tyyppi;
 
     @NotBlank
     private String kieli;
-
-    @URL
+    
     private String fileURL;
 
     public Tentti() {

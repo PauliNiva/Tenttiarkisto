@@ -10,15 +10,15 @@
     </footer>-->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="/js/clean-blog.min.js"></script>
     <!-- jQuery UI -->
-    <script src="jquery-ui/jquery-ui.js"></script>
+    <script src="/jquery-ui/jquery-ui.js"></script>
     <!-- Tenttiarkisto JS -->
-    <script src="js/tenttiarkisto.js"></script>
+    <script src="/js/tenttiarkisto.js"></script>
 
 </body>
 

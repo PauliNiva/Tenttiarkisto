@@ -16,4 +16,8 @@ public class Tyyppi extends AbstractPersistable<Long> {
         this.tyyppi = tyyppi;
     }
 
+    @Override
+    public String toString() {
+        return tyyppi;
+    }
 }

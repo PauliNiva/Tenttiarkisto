@@ -13,13 +13,13 @@
     <title>Tenttiarkisto</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="/css/clean-blog.css" rel="stylesheet">
     <!-- jQuery UI -->
-    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="/jquery-ui/jquery-ui.css" rel="stylesheet">
     <!-- Tenttiarkisto CSS -->
-    <link href="css/tenttiarkisto.css" rel="stylesheet">
+    <link href="/css/tenttiarkisto.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -54,10 +54,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Etusivu</a>
+                        <a href="/index.html">Etusivu</a>
                     </li>
                     <li>
-                        <a href="about.html">Kirjaudu</a>
+                        <a href="/about.html">Kirjaudu</a>
                     </li>
                 </ul>
             </div>

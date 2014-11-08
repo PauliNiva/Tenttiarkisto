@@ -3,6 +3,7 @@ package tenttiarkisto.domain;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.jpa.domain.AbstractPersistable;
@@ -13,7 +14,7 @@ public class Kurssi extends AbstractPersistable<Long> {
     @NotBlank
     private String nimi;
 
-    @OneToMany
+    @OneToMany(mappedBy="kurssi", fetch=FetchType.EAGER)
     private List<Tentti> kurssinTentit;
 
     public Kurssi() {

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tentti;
+import tenttiarkisto.repo.KurssiRepo;
 import tenttiarkisto.repo.TenttiRepo;
 
 @Service
@@ -16,10 +17,16 @@ public class TenttiService {
     @Autowired
     private TenttiRepo tenttiRepo;
     @Autowired
+    private KurssiRepo kurssiRepo;
+    @Autowired
     private FileService fileService;
+
+    public List<Tentti> list() {
+        return tenttiRepo.findAll();
+    }
     
-    public List<Tentti> list() {        
-        return tenttiRepo.findAll();        
+    public Tentti get(Long id) {
+        return tenttiRepo.findOne(id);
     }
 
     @Transactional
@@ -34,12 +41,18 @@ public class TenttiService {
         Kurssi kurssi = tentti.getKurssi();
         kurssi.getKurssinTentit().add(tentti);
 
-        tenttiFile.renameTo(new File(tenttiFile.getPath() + makeFilename(tentti)));
+        if (tenttiFile != null) {
+            tenttiFile.renameTo(new File(tenttiFile.getPath() + makeFilename(tentti)));
 
-        String url = fileService.putFile(tenttiFile);
+            String url = fileService.putFile(tenttiFile);
 
-        tentti.setFileURL(url);
+            tentti.setFileURL(url);
+        } else {
+            tentti.setFileURL("invalid");
+        }
+
         tenttiRepo.save(tentti);
+        kurssiRepo.save(kurssi);
     }
 
     private static String makeFilename(Tentti tentti) {
