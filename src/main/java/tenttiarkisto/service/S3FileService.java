@@ -10,7 +10,9 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 import java.io.File;
 import org.apache.log4j.Logger;
 import org.apache.log4j.Priority;
+import org.springframework.stereotype.Service;
 
+@Service
 public class S3FileService implements FileService {
 
     private final AmazonS3 s3;

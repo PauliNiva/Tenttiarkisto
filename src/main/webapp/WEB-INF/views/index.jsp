@@ -88,7 +88,7 @@
                         <h2 class="post-title">
                             Kurssilistaus
                         </h2>
-                        <p>palvelimelta saatu teksti: ${viesti}</p>
+                        <p>palvelimelta saatu teksti: ${kurssit}</p>
                 </div>
             </div>
         </div>
