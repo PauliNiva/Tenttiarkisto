@@ -58,6 +58,7 @@ public class KurssiController {
     @RequestMapping(method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("kurssit", kurssiService.list());
+        model.addAttribute("tyypit", tyyppiRepo.findAll());
         return "/WEB-INF/views/index.jsp";
     }
 }
