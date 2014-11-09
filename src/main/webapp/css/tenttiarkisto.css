@@ -68,3 +68,6 @@ form textarea:focus {
 a.btn {
 	text-decoration:none;
 }
+#lomake p {
+    margin-bottom:5px;
+}
