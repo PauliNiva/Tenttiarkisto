@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <h2>Lisää uusi tentti</h2>
@@ -7,8 +8,9 @@
         <p>Päivämäärä</p><input type="text" name="pvm" id="datepicker" />
         <p>Tyyppi</p>
         <select name="tyyppi">
-                <option>Kurssikoe</option>
-                <option>Erilliskoe</option>
+            <c:forEach var="tyyppi" items="${tyypit}">
+                <option value="${tyyppi.id}">${tyyppi}</option>
+            </c:forEach>
         </select>
         <p>Kieli</p>	
         <select name="kieli">
