@@ -8,12 +8,14 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.jpa.domain.AbstractPersistable;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Tentti extends AbstractPersistable<Long> {
 
     @NotNull
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="dd.MM.yyyy")
     private Date pvm;
 
     private String pitaja;

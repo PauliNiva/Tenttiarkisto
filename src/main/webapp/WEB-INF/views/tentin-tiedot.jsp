@@ -31,7 +31,7 @@
                 </tr>
                 <tr>
                     <th>URL:</th>
-                    <td>${tentti.fileURL}</td>
+                    <td><a href="${tentti.fileURL}">${tentti.fileURL}</a></td>
 
                 </tr>
             </table>

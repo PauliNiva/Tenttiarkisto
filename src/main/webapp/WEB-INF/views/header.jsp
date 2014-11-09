@@ -19,7 +19,7 @@
     <!-- jQuery UI -->
     <link href="/jquery-ui/jquery-ui.css" rel="stylesheet">
     <!-- bootstrapvalidator -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+    <%--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>--%>
     <!-- Tenttiarkisto CSS -->
     <link href="/css/tenttiarkisto.css" rel="stylesheet">
 

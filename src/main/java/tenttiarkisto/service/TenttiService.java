@@ -1,6 +1,7 @@
 package tenttiarkisto.service;
 
 import java.io.File;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import javax.transaction.Transactional;
@@ -24,7 +25,7 @@ public class TenttiService {
     public List<Tentti> list() {
         return tenttiRepo.findAll();
     }
-    
+
     public Tentti get(Long id) {
         return tenttiRepo.findOne(id);
     }
@@ -53,6 +54,22 @@ public class TenttiService {
 
         tenttiRepo.save(tentti);
         kurssiRepo.save(kurssi);
+    }
+
+    @Transactional
+    public Long addTentti(Tentti tentti, InputStream is, long length, String ext) {
+        Kurssi kurssi = tentti.getKurssi();
+        kurssi.getKurssinTentit().add(tentti);
+
+        String fileName = makeFilename(tentti) + '.' + ext;
+
+        String url = fileService.putFile(fileName, is, length);
+
+        tentti.setFileURL(url);
+
+        Long id = tenttiRepo.save(tentti).getId();
+        kurssiRepo.save(kurssi);
+        return id;
     }
 
     private static String makeFilename(Tentti tentti) {
