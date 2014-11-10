@@ -52,7 +52,7 @@ public class TenttiController {
             @RequestParam("pitaja") String pitaja) throws IOException, ParseException {
 
         Category log = Logger.getInstance(TenttiController.class);
-        log.info("file: " + Arrays.toString(file.getBytes()));
+        log.info("file: " + file.getOriginalFilename());
         log.info("kurssi: " + kurssiName);
         log.info("pvm: " + dateString);
         log.info("tyyppi: " + tyyppiId);

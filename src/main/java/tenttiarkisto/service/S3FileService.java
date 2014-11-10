@@ -48,7 +48,7 @@ public class S3FileService implements FileService {
             msg += "\nError Type:       " + ase.getErrorType();
             msg += "\nRequest ID:       " + ase.getRequestId();
 
-            Logger.getLogger(S3FileService.class).error(msg);
+            Logger.getInstance(S3FileService.class).error(msg);
             
 
             return null;
@@ -58,7 +58,7 @@ public class S3FileService implements FileService {
                     + "such as not being able to access the network.";
             msg += "\nError Message: " + ace.getMessage();
 
-            Logger.getLogger(S3FileService.class).error(msg);
+            Logger.getInstance(S3FileService.class).error(msg);
 
             return null;
         }
@@ -81,7 +81,7 @@ public class S3FileService implements FileService {
             msg += "\nError Type:       " + ase.getErrorType();
             msg += "\nRequest ID:       " + ase.getRequestId();
 
-            Logger.getLogger(S3FileService.class).log(Priority.ERROR, msg);
+            Logger.getInstance(S3FileService.class).error(msg);
 
             return null;
         } catch (AmazonClientException ace) {
@@ -90,7 +90,7 @@ public class S3FileService implements FileService {
                     + "such as not being able to access the network.";
             msg += "\nError Message: " + ace.getMessage();
 
-            Logger.getLogger(S3FileService.class).log(Priority.ERROR, msg);
+            Logger.getInstance(S3FileService.class).error(msg);
 
             return null;
         }
