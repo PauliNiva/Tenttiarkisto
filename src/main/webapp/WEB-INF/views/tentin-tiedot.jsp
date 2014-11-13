@@ -8,36 +8,59 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-            <table>
-                <tr>
-                    <th>Kurssi:</th>
-                    <td>${tentti.kurssi.nimi}</td>
-                </tr>
-                <tr>
-                    <th>PVM:</th>
-                    <td>${tentti.pvm}</td>
-                </tr>
-                <tr>
-                    <th>Pitäjä:</th>
-                    <td>${tentti.pitaja}</td>
-                </tr>
-                <tr>
-                    <th>Tyyppi:</th>
-                    <td>${tentti.tyyppi}</td>
-                </tr>
-                <tr>
-                    <th>Kieli:</th>
-                    <td>${tentti.kieli}</td>
-                </tr>
-                <tr>
-                    <th>URL:</th>
-                    <td><a href="${tentti.fileURL}">${tentti.fileURL}</a></td>
-
-                </tr>
-            </table>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-label">Linkki:</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <a class="tiedot-tieto" href="${tentti.fileURL}">Lataa</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-label">Kurssi:</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-tieto">${tentti.kurssi.nimi}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-label">Päivämäärä:</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-tieto">${tentti.pvm}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-label">Pitäjä:</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-tieto">${tentti.pitaja}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-label">Tyyppi:</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-tieto">${tentti.tyyppi}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-label">Kieli:</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="tiedot-tieto">${tentti.kieli}</p>
+                </div>
+            </div>
 
         </div>
     </div>
 </div>
+                    
+<jsp:include page="lomake.jsp" />                    
 
 <jsp:include page="footer.jsp" />

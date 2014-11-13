@@ -15,16 +15,6 @@
         </div>
     </div>
 
-    <header class="intro-header">
-    <div class="container tumma" id="lomake">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-                        <jsp:include page="lomake.jsp" />
-
-            </div>
-        </div>
-    </div>
-    </header>
+    <jsp:include page="lomake.jsp" />
 
     <jsp:include page="footer.jsp" />

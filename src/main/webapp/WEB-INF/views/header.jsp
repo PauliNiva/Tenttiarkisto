@@ -56,7 +56,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/index.html">Etusivu</a>
+                        <a href="/">Etusivu</a>
                     </li>
                     <li>
                         <a href="/about.html">Kirjaudu</a>
@@ -76,7 +76,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1>Tenttiarkisto</h1>
-			<p><a href="#lomake" class="btn btn-default">Lisää uusi tentti</a></p>
+			<p><a href="#lomake" class="btn btn-default lisaauusi">Lisää uusi tentti</a></p>
                     </div>
                 </div>
             </div>

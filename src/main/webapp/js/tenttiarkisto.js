@@ -1,4 +1,6 @@
-$('a').click(function(){
+$('.collapse').collapse();
+
+$('.lisaauusi').click(function(){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
@@ -6,7 +8,7 @@ $('a').click(function(){
 });
 
 $(function() {
-               $("#datepicker").datepicker({ dateFormat: "dd.mm.yy" }).val();
+    $("#datepicker").datepicker({ dateFormat: "dd.mm.yy" }).val();
 });
 
 $(document).ready(function() {
