@@ -1,3 +1,6 @@
+a {
+    color:#0085a1;
+}
 .intro-header {
 	background: rgba(56,173,157,1);
 	background: -moz-linear-gradient(-45deg, rgba(56,173,157,1) 0%, rgba(19,69,105,1) 100%);
@@ -74,13 +77,33 @@ a.btn {
 .panel-heading{
     border:1px solid #999 !important;
     border-radius:3px;
-    background:#eee;
+    background:#EAF2F3;
     margin-top:5px;
+}
+.panel-group {
+    margin-top:25px;
 }
 .tiedot-label {
     font-weight:bold;
     margin:0;
+    background:#EAF2F3;
 }
 .tiedot-tieto {
     margin:0;
+}
+.tiedot-linkki {
+    font-size:1.5em;
+}
+table.tiedot {
+    border:1px solid #999;
+}
+table.tiedot tr:first-child td {
+    border:none;
+}
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+}
+.glyphicon {
+    padding:0 5px;
 }
