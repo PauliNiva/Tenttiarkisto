@@ -1,0 +1,87 @@
+582505 Äidinkielinen viestintä
+582506 Tutkimustiedonhaku 
+582519 Scientific Writing for MSc in Computer Science 
+582516 Software Factory Work Experience (period III) 
+582516 Software Factory Work Experience (period IV) 
+582508 Ohjelmistotuotantoprojektiin liittyvä työelämään orientointi 
+582102 Johdatus tietojenkäsittelytieteeseen (itseopiskelu) 
+581325 Ohjelmoinnin perusteet 
+582103 Ohjelmoinnin jatkokurssi 
+582104 Ohjelmistotekniikan menetelmät (luennoton) 
+581328 Tietokantojen perusteet 
+58160 Ohjelmoinnin harjoitustyö (periodi III) 
+58160 Ohjelmoinnin harjoitustyö (periodi IV) 
+582204 Kandidaatintutkielma (kevät 2014) 
+58131 Tietorakenteet ja algoritmit 
+581305 Tietokoneen toiminta (itseopiskelu) 
+581259 Ohjelmistotuotanto 
+582219 Käyttöjärjestelmät 
+581260 Ohjelmistotuotantoprojekti (kevät 2014) 
+582215 Tietoturvan perusteet 
+582358 Laskennan teorian opintopiiri 
+582711 Intelligent Embedded Systems 
+582317 Linux-ylläpito 
+582330 Ohjelmointitekniikka (Scala) 
+582713 Warehouse-Scale Computing 
+582201 Human-Computer Interaction 
+582380 Node.js ohjelmointiprojekti 
+582714 Pop-Up course: SomeJam 
+582368 Web-palvelinohjelmointi Ruby on Rails 
+582364 Aineopintojen harjoitustyö: Tietoliikenne 
+582203 Aineopintojen harjoitustyö: Tietokantasovellus (periodi III) 
+582203 Aineopintojen harjoitustyö: Tietokantasovellus (periodi IV) 
+58161 Aineopintojen harjoitustyö: Tietorakenteet ja algoritmit (periodi III) 
+58161 Aineopintojen harjoitustyö: Tietorakenteet ja algoritmit (periodi IV) 
+582379 Web-palvelinohjelmointi Ruby on Rails, harjoitustyö 
+582634 Data Mining 
+582635 Data Mining Project 
+582661 Deterministic Distributed Algorithms 
+582712 Kvanttilaskenta 
+582684 Location-Awareness 
+582636 Probabilistic Models 
+582637 Project in Probabilistic Models 
+582668 Project in String Processing Algorithms 
+582709 Reading Group on Digital Literature 
+582376 Reinforcement Learning Project 
+582669 Supervised Machine Learning 
+582638 Unsupervised Machine Learning 
+582674 Unsupervised Machine Learning Projects 
+582622 CINCO Laboratory 
+582705 Design and User Evaluation of Augmented-Reality Interfaces 
+582665 Distributed Systems Project 
+582666 Interactive Systems 
+582646 Mobile Middleware 
+582704 Mobile Platform Security 
+582615 Overlay and P2P Networks 
+582708 Software Security 
+582648 Code Generation (self study course) 
+58144 Compilers 
+582491 Hajautetut tietokannat 
+582694 Health Informatics 
+582702 Käyttöliittymien arviointimenetelmät 
+582663 Ohjelmistoarkkitehtuurien harjoitustyö 
+58153003 Ohjelmistojen suorituskyvyn suunnittelu 
+581359 Ohjelmistoprosessit ja ohjelmistojen laatu 
+582642 Service-Oriented Software Engineering 
+582659 Software Factory Project (period III) 
+582659 Software Factory Project (period IV) 
+581257 Tiedonhakumenetelmät 
+58074 Tietokonegrafiikka 
+582490 Transaktioiden hallinta 
+582483 Biological Sequence Analysis 
+582676 Project in Biological Sequence Analysis 
+58311304 Seminar on Computational Creativity 
+58312103 Seminar on Game AI 
+58314101 Seminar on Parameterized Algorithms and Complexity 
+58314105 Seminar: Reinforcement Learning and Its Applications 
+58314106 Seminar: Software-defined Networking 
+58314107 Seminar: Trends in Enterprise Interoperability - Interoperability Management 
+58314102 Seminaari: Arkkitehtuurisuunnittelu modernissa ohjelmistotuotannossa 
+58314108 Seminaari: Monisuoritinohjelmointi 
+58313106 Seminaari: Ohjelmointikielet ja rinnakkaisuus 
+58314104 Seminaari: Suurten tietomassojen hallinta 
+58312107 Seminar: Cloud-based Software Engineering 
+58314109 Seminar: Real-time Value Delivery in Software Engineering 
+58307312 MSc Thesis Seminar on Bioinformatics 
+58314103 Seminar on Biological Networks 
+582710 PhD Student Seminar 
