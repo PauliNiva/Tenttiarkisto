@@ -80,6 +80,9 @@ a.btn {
     background:#EAF2F3;
     margin-top:5px;
 }
+.panel-group {
+    margin-top:25px;
+}
 .tiedot-label {
     font-weight:bold;
     margin:0;
@@ -100,4 +103,7 @@ table.tiedot tr:first-child td {
 .collapsing {
     -webkit-transition: none;
     transition: none;
+}
+.glyphicon {
+    padding:0 5px;
 }

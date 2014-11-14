@@ -10,7 +10,7 @@
 
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1">
-                    <a class="tiedot-linkki" href="${tentti.fileURL}">Katso tentti tästä <div class="glyphicon glyphicon-log-in" style="padding-left:5px;"></div></a><br/><br/>
+                    <a class="tiedot-linkki" href="${tentti.fileURL}">Katso tentti tästä <div class="glyphicon glyphicon-log-in"></div></a><br/><br/>
                     
                     <table class="table tiedot">
                         <tr><td class="tiedot-label">Kurssi</td><td class="tiedot-tieto">${tentti.kurssi.nimi}</td></tr>
@@ -19,6 +19,8 @@
                         <tr><td class="tiedot-label">Tyyppi</td><td class="tiedot-tieto">${tentti.tyyppi}</td></tr>
                         <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
                     </table>
+                    
+                    <a href="/">Takaisin</a>
                     
                 </div>
             </div>

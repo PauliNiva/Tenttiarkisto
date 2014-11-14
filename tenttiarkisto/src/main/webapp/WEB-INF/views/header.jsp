@@ -59,7 +59,7 @@
                         <a href="/">Etusivu</a>
                     </li>
                     <li>
-                        <a href="/about.html">Kirjaudu</a>
+                        <a href="/">Kirjaudu</a>
                     </li>
                 </ul>
             </div>
