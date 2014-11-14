@@ -3,6 +3,7 @@ package tenttiarkisto.service;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.repo.KurssiRepo;
@@ -29,7 +30,8 @@ public class KurssiService {
     }
 
     public List<Kurssi> list() {
-        return kurssiRepo.findAll();
+        return kurssiRepo.findAll(new Sort(Sort.Direction.ASC, "nimi"));
+                
     }
 
     public Kurssi get(Long id) {

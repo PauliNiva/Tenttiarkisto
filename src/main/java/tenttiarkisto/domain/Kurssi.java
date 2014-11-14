@@ -15,6 +15,8 @@ public class Kurssi extends AbstractPersistable<Long> {
     @NotBlank
     @Column(unique=true)
     private String nimi;
+    
+    private String koodi;
 
     @OneToMany(mappedBy="kurssi", fetch=FetchType.EAGER)
     private List<Tentti> kurssinTentit;
