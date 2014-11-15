@@ -3,7 +3,6 @@ package tenttiarkisto.controllers;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
@@ -48,7 +48,7 @@ public class TenttiController {
             @RequestParam("kurssi") String kurssiName,
             @RequestParam("pvm") String dateString,
             @RequestParam("tyyppi") Long tyyppiId,
-            @RequestParam("kieli") String kieli,
+            @RequestParam("kieli") Kieli kieli,
             @RequestParam("pitaja") String pitaja) throws IOException, ParseException {
 
         Category log = Logger.getInstance(TenttiController.class);
