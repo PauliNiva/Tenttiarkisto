@@ -29,12 +29,26 @@ public class Kurssi extends AbstractPersistable<Long> {
         kurssinTentit = new ArrayList<>();
     }
 
+    public Kurssi(String nimi, String koodi) {
+        this.nimi = nimi;
+        this.koodi = koodi;
+        kurssinTentit = new ArrayList<>();
+    }
+
     public String getNimi() {
         return nimi;
     }
 
     public void setNimi(String nimi) {
         this.nimi = nimi;
+    }
+
+    public String getKoodi() {
+        return koodi;
+    }
+
+    public void setKoodi(String koodi) {
+        this.koodi = koodi;
     }
 
     public List<Tentti> getKurssinTentit() {
