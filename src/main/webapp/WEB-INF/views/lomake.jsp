@@ -1,5 +1,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<c:set var="url" value="${pageContext.request.requestURI}" />
 
     <header class="intro-header">
     <div class="container tumma" id="lomake">
@@ -13,10 +16,17 @@
                     <p>Kurssi</p><!--<input type="text" name="kurssi" />-->
                     
                      <select id="kurssihaku">
-                        <option></option> <!-- placeholderille -->
-                        <c:forEach var="kurssi" items="${kurssit}">
-                            <option value="${kurssi.id}">${kurssi.nimi}</option>
-                        </c:forEach>
+                            <c:choose>
+                                <c:when test="${fn:indexOf(url, 'tentit') ne 1}">
+                                    <option value="${tentti.kurssi.nimi}">${tentti.kurssi.nimi}</option>
+                                </c:when>
+                                <c:otherwise>
+                                    <option></option> <!-- placeholderille -->
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="kurssi" items="${kurssit}">
+                                <option value="${kurssi.nimi}">${kurssi.nimi}</option>
+                            </c:forEach>
                     </select>
 
                     <p>Päivämäärä</p><input type="text" name="pvm" id="datepicker" />
