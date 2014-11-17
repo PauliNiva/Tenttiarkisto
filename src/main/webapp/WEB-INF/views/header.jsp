@@ -22,6 +22,8 @@
     <%--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>--%>
     <!-- Tenttiarkisto CSS -->
     <link href="/css/tenttiarkisto.css" rel="stylesheet">
+    <!-- Select2 CSS -->
+    <link href="/select2/select2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -59,7 +61,7 @@
                         <a href="/">Etusivu</a>
                     </li>
                     <li>
-                        <a href="/">Kirjaudu</a>
+                        <a href="/kirjaudu">Kirjaudu</a>
                     </li>
                 </ul>
             </div>

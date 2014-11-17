@@ -10,7 +10,14 @@
             <form method="POST" action="/tentit" id="lomakeform" enctype="multipart/form-data">
                     <p>Tiedosto</p><input type="file" name="tiedosto" />
 
-                    <p>Kurssi</p><input type="text" name="kurssi" />
+                    <p>Kurssi</p><!--<input type="text" name="kurssi" />-->
+                    
+                     <select id="kurssihaku">
+                        <option></option> <!-- placeholderille -->
+                        <c:forEach var="kurssi" items="${kurssit}">
+                            <option value="${kurssi.id}">${kurssi.nimi}</option>
+                        </c:forEach>
+                    </select>
 
                     <p>Päivämäärä</p><input type="text" name="pvm" id="datepicker" />
 
