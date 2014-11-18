@@ -15,7 +15,7 @@
 
                     <p>Kurssi</p><!--<input type="text" name="kurssi" />-->
                     
-                     <select id="kurssihaku">
+                     <select id="kurssihaku" name="kurssi">
                             <c:choose>
                                 <c:when test="${fn:indexOf(url, 'tentit') ne 1}">
                                     <option value="${tentti.kurssi.nimi}">${tentti.kurssi.nimi}</option>
