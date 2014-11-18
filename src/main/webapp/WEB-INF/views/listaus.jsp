@@ -20,7 +20,7 @@
             <div id="collapse${kurssi.id}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading">
               <div class="panel-body">
                 <c:forEach var="tentti" items="${kurssi.kurssinTentit}">
-                    ${tentti.pvm} ${tentti.tyyppi}: <a href="/tentit/${tentti.fileURL}">Avaa tentti</a> / <a href="/tentit/${tentti.id}">Tentin tiedot</a><br/>
+                    ${tentti.pvm} ${tentti.tyyppi}: <a href="${tentti.fileURL}">Avaa tentti</a> / <a href="/tentit/${tentti.id}">Tentin tiedot</a><br/>
                 </c:forEach>
               </div>
             </div>
