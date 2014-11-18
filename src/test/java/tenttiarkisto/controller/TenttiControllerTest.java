@@ -43,13 +43,6 @@ public class TenttiControllerTest {
     }
 
     @Test
-    public void postOk() throws Exception {
-        mockMvc.perform(post("/tentit"))
-                .andExpect(status().is3xxRedirection())
-                .andReturn();
-    }
-
-    @Test
     public void getOk() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(redirectedUrl("/kurssit"));
