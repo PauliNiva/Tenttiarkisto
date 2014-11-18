@@ -10,16 +10,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
 import tenttiarkisto.auth.JpaAuthenticationProvider;
 
-
 @Configuration
 @EnableWebMvcSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
+        http.csrf().disable();
+                
         http.authorizeRequests()
-                //.antMatchers("/login", "/kurssit", "/static*/**").permitAll()
-                //.antMatchers(HttpMethod.POST, "/persons").permitAll()
                 .anyRequest().permitAll();
 
         http.formLogin()

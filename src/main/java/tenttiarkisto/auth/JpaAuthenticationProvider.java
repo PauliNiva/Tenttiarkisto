@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import tenttiarkisto.domain.Person;
 import tenttiarkisto.repo.PersonRepo;
 
-
 @Component
 public class JpaAuthenticationProvider implements AuthenticationProvider {
 

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import tenttiarkisto.domain.Person;
 import tenttiarkisto.repo.PersonRepo;
 
-
 @Service
 public class PersonService {
 
