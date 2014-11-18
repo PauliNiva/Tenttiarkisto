@@ -45,6 +45,8 @@
                     </select>
 
                     <p>Pitäjä</p><input type="text" name="pitaja" />
+                    
+                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
                     <p><br/><input class="btn btn-default" type="submit" value="Lähetä"/>
             </form>
