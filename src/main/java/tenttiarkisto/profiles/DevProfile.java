@@ -6,9 +6,11 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
+import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.CSVService;
 import tenttiarkisto.service.KurssiService;
@@ -26,6 +28,9 @@ public class DevProfile {
 
     @Autowired
     TyyppiRepo tyyppiRepo;
+    
+    @Autowired
+    KieliRepo kieliRepo;
 
     @Autowired
     CSVService csvService;
@@ -45,6 +50,10 @@ public class DevProfile {
         Tyyppi ek = new Tyyppi();
         ek.setTyyppi("Erilliskoe");
         tyyppiRepo.save(ek);
+        
+        Kieli fi = new Kieli();
+        fi.setNimi("FI");
+        kieliRepo.save(fi);
 
         Kurssi k1 = new Kurssi("Tietorakenteet");
         kurssiService.addKurssi(k1);
