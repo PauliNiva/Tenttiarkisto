@@ -11,7 +11,6 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 public class Person extends AbstractPersistable<Long> {
 
     private String name;
-    private String slogan;
 
     @Column(unique = true)
     private String username;

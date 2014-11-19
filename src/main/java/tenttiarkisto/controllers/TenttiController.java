@@ -39,6 +39,11 @@ public class TenttiController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String show(Model model, @PathVariable Long id) {
         model.addAttribute("tentti", tenttiService.get(id));
+
+        //lomakkeelle
+        model.addAttribute("kurssit", kurssiService.list());
+        model.addAttribute("tyypit", tyyppiRepo.findAll());
+
         return "/WEB-INF/views/tentin-tiedot.jsp";
     }
 

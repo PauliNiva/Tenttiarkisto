@@ -21,6 +21,8 @@
     <%-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script> --%>
     <!-- Tenttiarkisto JS -->
     <script src="/js/tenttiarkisto.js"></script>
+    <!-- Select2 JS -->
+    <script src="/select2/select2.js"></script>
 
 </body>
 

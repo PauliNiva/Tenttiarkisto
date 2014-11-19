@@ -1,5 +1,7 @@
 $('.collapse').collapse();
 
+$(document).ready(function() { $("#kurssihaku").select2({minimumInputLength: 2, placeholder: "Valitse kurssi"}); });
+
 $('.lisaauusi').click(function(){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
