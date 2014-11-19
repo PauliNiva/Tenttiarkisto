@@ -41,7 +41,7 @@
                     <p>Kieli</p>	
                     <select name="kieli">
                         <c:forEach var="kieli" items="${kielet}">
-                            <option value="${kieli.id}">${kieli}</option>
+                            <option value="${kieli.id}">${kieli.nimi}</option>
                         </c:forEach>
                     </select>
 

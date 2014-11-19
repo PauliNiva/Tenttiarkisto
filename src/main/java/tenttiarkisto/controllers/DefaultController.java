@@ -2,11 +2,12 @@ package tenttiarkisto.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tyyppi;
+import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.CSVService;
 import tenttiarkisto.service.KurssiService;
@@ -19,6 +20,9 @@ public class DefaultController {
 
     @Autowired
     TyyppiRepo tyyppiRepo;
+
+    @Autowired
+    KieliRepo kieliRepo;
 
     @Autowired
     CSVService csvService;
@@ -42,7 +46,15 @@ public class DefaultController {
         Tyyppi ek = new Tyyppi();
         ek.setTyyppi("Erilliskoe");
         tyyppiRepo.save(ek);
-        
+
+        Kieli fi = new Kieli();
+        fi.setNimi("Suomi");
+        kieliRepo.save(fi);
+
+        Kieli en = new Kieli();
+        en.setNimi("English");
+        kieliRepo.save(en);
+
         return "Done";
     }
 

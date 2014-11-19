@@ -34,6 +34,8 @@ public class CSVService {
 
                 String[] rivi = line.split(cvsSplitBy);
                 lista.add(new Kurssi(rivi[1], rivi[0]));
+                Logger.getLogger(CSVService.class).warn(rivi[1] + " - " + rivi[0]);
+                Logger.getLogger(CSVService.class).warn(new Kurssi(rivi[1], rivi[0]));
             }
 
         } catch (FileNotFoundException e) {

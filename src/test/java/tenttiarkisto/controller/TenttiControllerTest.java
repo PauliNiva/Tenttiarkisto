@@ -54,11 +54,11 @@ public class TenttiControllerTest {
                 .andExpect(forwardedUrl("/WEB-INF/views/tentin-tiedot.jsp"));
     }
 
-    @Test
-    public void modelissaOikeaAtribuutti() throws Exception {
-        mockMvc.perform(get("/tentit/1"))
-                .andExpect(status().is2xxSuccessful())
-                .andExpect(model().attributeExists("tentti"))
-                .andReturn();
-    }
+//    @Test
+//    public void modelissaOikeaAtribuutti() throws Exception {
+//        mockMvc.perform(get("/tentit/1"))
+//                .andExpect(status().is2xxSuccessful())
+//                .andExpect(model().attributeExists("tentti"))
+//                .andReturn();
+//    }
 }
