@@ -12,6 +12,8 @@
 
     <title>Tenttiarkisto</title>
 
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
