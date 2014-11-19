@@ -52,7 +52,7 @@ public class DevProfile {
         tyyppiRepo.save(ek);
         
         Kieli fi = new Kieli();
-        fi.setNimi("FI");
+        fi.setNimi("Suomi");
         kieliRepo.save(fi);
 
         Kurssi k1 = new Kurssi("Tietorakenteet");
