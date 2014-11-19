@@ -99,11 +99,7 @@
             <type>jar</type>
         </dependency>
         <dependency>
-<<<<<<< HEAD
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>7.0.55</version>
-=======
+
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
             <version>3.2.5.RELEASE</version>
@@ -113,7 +109,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>3.2.5.RELEASE</version>
->>>>>>> 009acbe34d624c4be881fa2cc25bf74745e9ecc4
             <type>jar</type>
         </dependency>
     </dependencies>
