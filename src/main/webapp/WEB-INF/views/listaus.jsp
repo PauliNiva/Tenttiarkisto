@@ -6,9 +6,16 @@
     Kurssilistaus
 </h2>
 
+<form action="/kurssit" method="get">
+    <input type="text" name="haku" value="${param.haku}" />
+    <input type="submit" value="Submit">
+</form>
+    
+<c:set var="hakusana" value="${param.haku}" />
+
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <c:forEach var="kurssi" items="${kurssit}">
-        <c:if test="${fn:length(kurssi.kurssinTentit) gt 0}">
+        <c:if test="${fn:length(kurssi.kurssinTentit) gt 0 && fn:indexOf(kurssi.nimi, hakusana) ne -1}">
             <div class="panel-heading" role="tab" id="heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse${kurssi.id}" aria-expanded="true" aria-controls="collapse${kurssi.id}">
