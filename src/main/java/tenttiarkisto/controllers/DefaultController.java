@@ -27,35 +27,35 @@ public class DefaultController {
     @Autowired
     CSVService csvService;
 
-    @RequestMapping("/")
-    public String view() {
-        return "redirect:/kurssit";
-    }
-
-    @RequestMapping("/initializekurssit")
-    @ResponseBody
-    public String init() {
-        for (Kurssi kurssi : csvService.readCSV()) {
-            kurssiService.addKurssi(kurssi);
-        }
-
-        Tyyppi kk = new Tyyppi();
-        kk.setTyyppi("Kurssikoe");
-        tyyppiRepo.save(kk);
-
-        Tyyppi ek = new Tyyppi();
-        ek.setTyyppi("Erilliskoe");
-        tyyppiRepo.save(ek);
-
-        Kieli fi = new Kieli();
-        fi.setNimi("Suomi");
-        kieliRepo.save(fi);
-
-        Kieli en = new Kieli();
-        en.setNimi("English");
-        kieliRepo.save(en);
-
-        return "Done";
-    }
+//    @RequestMapping("/")
+//    public String view() {
+//        return "redirect:/kurssit";
+//    }
+//
+//    @RequestMapping("/initializekurssit")
+//    @ResponseBody
+//    public String init() {
+//        for (Kurssi kurssi : csvService.readCSV()) {
+//            kurssiService.addKurssi(kurssi);
+//        }
+//
+//        Tyyppi kk = new Tyyppi();
+//        kk.setTyyppi("Kurssikoe");
+//        tyyppiRepo.save(kk);
+//
+//        Tyyppi ek = new Tyyppi();
+//        ek.setTyyppi("Erilliskoe");
+//        tyyppiRepo.save(ek);
+//
+//        Kieli fi = new Kieli();
+//        fi.setNimi("Suomi");
+//        kieliRepo.save(fi);
+//
+//        Kieli en = new Kieli();
+//        en.setNimi("English");
+//        kieliRepo.save(en);
+//
+//        return "Done";
+//    }
 
 }
