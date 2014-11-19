@@ -3,7 +3,6 @@ package tenttiarkisto.controllers;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
@@ -16,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
+import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.KurssiService;
 import tenttiarkisto.service.TenttiService;
@@ -35,6 +36,9 @@ public class TenttiController {
 
     @Autowired
     TyyppiRepo tyyppiRepo;
+    
+    @Autowired
+    KieliRepo kieliRepo;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String show(Model model, @PathVariable Long id) {
@@ -43,6 +47,7 @@ public class TenttiController {
         //lomakkeelle
         model.addAttribute("kurssit", kurssiService.list());
         model.addAttribute("tyypit", tyyppiRepo.findAll());
+        model.addAttribute("kielet", kieliRepo.findAll());
 
         return "/WEB-INF/views/tentin-tiedot.jsp";
     }
@@ -53,7 +58,7 @@ public class TenttiController {
             @RequestParam("kurssi") String kurssiName,
             @RequestParam("pvm") String dateString,
             @RequestParam("tyyppi") Long tyyppiId,
-            @RequestParam("kieli") String kieli,
+            @RequestParam("kieli") Long kieliId,
             @RequestParam("pitaja") String pitaja) throws IOException, ParseException {
 
         Category log = Logger.getInstance(TenttiController.class);
@@ -61,7 +66,7 @@ public class TenttiController {
         log.info("kurssi: " + kurssiName);
         log.info("pvm: " + dateString);
         log.info("tyyppi: " + tyyppiId);
-        log.info("kieli: " + kieli);
+        log.info("kieli: " + kieliId);
         log.info("pitaja: " + pitaja);
 
         Kurssi kurssi = kurssiService.findByName(kurssiName);
@@ -73,6 +78,8 @@ public class TenttiController {
         log.info("ext: " + ext);
 
         Tyyppi tyyppi = tyyppiRepo.findOne(tyyppiId);
+        Kieli kieli = kieliRepo.findOne(kieliId);
+        
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         Date date = sdf.parse(dateString);
         log.info("date: " + date);

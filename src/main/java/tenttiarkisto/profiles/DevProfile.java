@@ -6,9 +6,11 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
+import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.CSVService;
 import tenttiarkisto.service.KurssiService;
@@ -26,6 +28,9 @@ public class DevProfile {
 
     @Autowired
     TyyppiRepo tyyppiRepo;
+    
+    @Autowired
+    KieliRepo kieliRepo;
 
     @Autowired
     CSVService csvService;
@@ -45,19 +50,23 @@ public class DevProfile {
         Tyyppi ek = new Tyyppi();
         ek.setTyyppi("Erilliskoe");
         tyyppiRepo.save(ek);
+        
+        Kieli fi = new Kieli();
+        fi.setNimi("Suomi");
+        kieliRepo.save(fi);
 
         Kurssi k1 = new Kurssi("Tietorakenteet");
         kurssiService.addKurssi(k1);
 
-        tenttiService.addTentti(new Tentti(new Date(113, 4, 24), null, k1, ek, "FI", null), null);
-        tenttiService.addTentti(new Tentti(new Date(112, 4, 24), null, k1, ek, "FI", null), null);
-        tenttiService.addTentti(new Tentti(new Date(114, 4, 24), null, k1, ek, "FI", null), null);
+        tenttiService.addTentti(new Tentti(new Date(113, 4, 24), null, k1, ek, fi, null), null);
+        tenttiService.addTentti(new Tentti(new Date(112, 4, 24), null, k1, ek, fi, null), null);
+        tenttiService.addTentti(new Tentti(new Date(114, 4, 24), null, k1, ek, fi, null), null);
 
         Kurssi k2 = new Kurssi("Ohjelmoinnin perusteet");
         kurssiService.addKurssi(k2);
-        tenttiService.addTentti(new Tentti(new Date(112, 10, 20), null, k2, ek, "FI", null), null);
-        tenttiService.addTentti(new Tentti(new Date(114, 10, 24), null, k2, ek, "FI", null), null);
-        tenttiService.addTentti(new Tentti(new Date(113, 10, 22), null, k2, ek, "FI", null), null);
+        tenttiService.addTentti(new Tentti(new Date(112, 10, 20), null, k2, ek, fi, null), null);
+        tenttiService.addTentti(new Tentti(new Date(114, 10, 24), null, k2, ek, fi, null), null);
+        tenttiService.addTentti(new Tentti(new Date(113, 10, 22), null, k2, ek, fi, null), null);
 
         kurssiService.addKurssi(new Kurssi("Web-palvelinohjelmointi"));
         kurssiService.addKurssi(new Kurssi("Käyttöjärjestelmät"));

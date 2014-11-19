@@ -40,8 +40,9 @@
 
                     <p>Kieli</p>	
                     <select name="kieli">
-                            <option>Suomi</option>
-                            <option>English</option>
+                        <c:forEach var="kieli" items="${kielet}">
+                            <option value="${kieli.id}">${kieli}</option>
+                        </c:forEach>
                     </select>
 
                     <p>Pitäjä</p><input type="text" name="pitaja" />
