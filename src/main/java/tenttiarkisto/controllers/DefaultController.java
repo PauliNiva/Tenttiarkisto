@@ -2,7 +2,9 @@ package tenttiarkisto.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
@@ -56,6 +58,11 @@ public class DefaultController {
         kieliRepo.save(en);
 
         return "Done";
+    }
+    
+    @RequestMapping(value = "kirjaudu", method = RequestMethod.GET)
+    public String kirjautumisNakyma(Model model) {
+        return "/WEB-INF/views/kirjaudu.jsp";
     }
 
 }
