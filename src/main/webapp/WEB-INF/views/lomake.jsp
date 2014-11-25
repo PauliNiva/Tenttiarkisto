@@ -15,7 +15,7 @@
 
                     <p>Kurssi</p><!--<input type="text" name="kurssi" />-->
                     
-                     <select id="kurssihaku">
+                     <select id="kurssihaku" name="kurssi">
                             <c:choose>
                                 <c:when test="${fn:indexOf(url, 'tentit') ne 1}">
                                     <option value="${tentti.kurssi.nimi}">${tentti.kurssi.nimi}</option>
@@ -40,8 +40,9 @@
 
                     <p>Kieli</p>	
                     <select name="kieli">
-                            <option>Suomi</option>
-                            <option>English</option>
+                        <c:forEach var="kieli" items="${kielet}">
+                            <option value="${kieli.id}">${kieli.nimi}</option>
+                        </c:forEach>
                     </select>
 
                     <p>Pitäjä</p><input type="text" name="pitaja" />

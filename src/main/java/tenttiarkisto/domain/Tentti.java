@@ -28,15 +28,16 @@ public class Tentti extends AbstractPersistable<Long> {
     @ManyToOne
     private Tyyppi tyyppi;
 
-    @NotBlank
-    private String kieli;
+    @NotNull
+    @ManyToOne
+    private Kieli kieli;
     
     private String fileURL;
 
     public Tentti() {
     }
 
-    public Tentti(Date pvm, String pitaja, Kurssi kurssi, Tyyppi tyyppi, String kieli, String fileURL) {
+    public Tentti(Date pvm, String pitaja, Kurssi kurssi, Tyyppi tyyppi, Kieli kieli, String fileURL) {
         this.pvm = pvm;
         this.pitaja = pitaja;
         this.kurssi = kurssi;
@@ -77,11 +78,11 @@ public class Tentti extends AbstractPersistable<Long> {
         this.tyyppi = tyyppi;
     }
 
-    public String getKieli() {
+    public Kieli getKieli() {
         return kieli;
     }
 
-    public void setKieli(String kieli) {
+    public void setKieli(Kieli kieli) {
         this.kieli = kieli;
     }
 
