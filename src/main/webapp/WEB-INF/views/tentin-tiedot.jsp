@@ -31,13 +31,19 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <br/><hr/>
             <h3>Kommentoi</h3>
-            <form action="/" method="post">
+            <form action="/kommentit" method="post">
                 <div><p>Nimi:</p><input type="text" name="nimi"/></div>
                 <div><p>Kommentti:</p><textarea cols="40" rows="5" name="kommentti"></textarea></div>
                 <br/>
                 <div><input class="btn" type="submit" value="Lähetä"/></div>
             </form>
 
+            <h3>Kommentit</h3>
+            <ul>
+            <c:forEach var="kommentti" items="${kommentit}">
+                <li>${kommentti.kirjoittaja}: ${kommentti.sisalto}</li>
+            </c:forEach>
+        </ul>
         </div>
     </div>
 </div>
