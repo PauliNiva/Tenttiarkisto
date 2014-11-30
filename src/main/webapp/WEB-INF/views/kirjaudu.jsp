@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-                <form action="/tervetuloa" method="post">
+                <form action="/tervetuloa" method="POST">
                     <div><p>Käyttäjä:</p><input type="text" name="kayttaja"/></div>
                     <div><p>Salasana:</p><input type="salasana" name="salasana"/></div>
                     <div><input type="submit" value="Kirjaudu"/></div>
