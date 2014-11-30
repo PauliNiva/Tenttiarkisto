@@ -7,12 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import tenttiarkisto.domain.Kieli;
+import tenttiarkisto.domain.Kommentti;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
 import tenttiarkisto.repo.KieliRepo;
+import tenttiarkisto.repo.KommenttiRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.CSVService;
+import tenttiarkisto.service.KommenttiService;
 import tenttiarkisto.service.KurssiService;
 import tenttiarkisto.service.TenttiService;
 
@@ -35,6 +38,12 @@ public class DevProfile {
     @Autowired
     CSVService csvService;
 
+    @Autowired
+    KommenttiService kommenttiService;
+    
+    @Autowired 
+    KommenttiRepo kommenttiRepo;
+    
     @PostConstruct
     @Transactional
     public void init() {
@@ -76,5 +85,10 @@ public class DevProfile {
         kurssiService.addKurssi(new Kurssi("Käyttöjärjestelmät"));
         kurssiService.addKurssi(new Kurssi("Johdatus tekoälyyn"));
         kurssiService.addKurssi(new Kurssi("Ohjelmistotuotanto"));
+        
+        Kommentti kommentti = new Kommentti();
+        kommentti.setKirjoittaja("Olli Opiskelija");
+        kommentti.setSisalto("Helppo tentti!");
+        kommenttiService.addKommentti(kommentti);
     }
 }

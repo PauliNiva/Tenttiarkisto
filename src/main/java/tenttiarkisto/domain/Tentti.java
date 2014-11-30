@@ -1,12 +1,13 @@
 package tenttiarkisto.domain;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
-import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -31,6 +32,9 @@ public class Tentti extends AbstractPersistable<Long> {
     @NotNull
     @ManyToOne
     private Kieli kieli;
+    
+    @OneToMany
+    private List<Kommentti> tentinKommentit;
     
     private String fileURL;
 
@@ -92,6 +96,14 @@ public class Tentti extends AbstractPersistable<Long> {
 
     public void setFileURL(String fileURL) {
         this.fileURL = fileURL;
+    }
+
+    public List<Kommentti> getTentinKommentit() {
+        return tentinKommentit;
+    }
+
+    public void setTentinKommentit(List<Kommentti> tentinKommentit) {
+        this.tentinKommentit = tentinKommentit;
     }
 
 }

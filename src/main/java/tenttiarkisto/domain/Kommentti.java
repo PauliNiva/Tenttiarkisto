@@ -16,8 +16,28 @@ public class Kommentti extends AbstractPersistable<Long>{
     
     private String sisalto;
     
-    @ManyToOne
+//    @ManyToOne
     private String kirjoittaja;
+    
+    @ManyToOne
+    private Tentti kommentoituTentti;
+    
+    public Kommentti(){
+    }
+    
+    public Kommentti(String sisalto, String kirjoittaja, Tentti kommentoituTentti){
+        this.sisalto = sisalto;
+        this.kirjoittaja = kirjoittaja;
+        this.kommentoituTentti = kommentoituTentti;
+    }
+
+    public Tentti getKommentoituTentti() {
+        return kommentoituTentti;
+    }
+
+    public void setKommentoituTentti(Tentti kommentoituTentti) {
+        this.kommentoituTentti = kommentoituTentti;
+    }
 
     public Date getPvm() {
         return pvm;

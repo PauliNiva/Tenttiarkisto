@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1">
                     <a class="tiedot-linkki" href="${tentti.fileURL}">Katso tentti tästä <div class="glyphicon glyphicon-log-in"></div></a><br/><br/>
-                    
+
                     <table class="table tiedot">
                         <tr><td class="tiedot-label">Kurssi</td><td class="tiedot-tieto">${tentti.kurssi.nimi}</td></tr>
                         <tr><td class="tiedot-label">Päivämäärä</td><td class="tiedot-tieto">${tentti.pvm}</td></tr>
@@ -19,10 +19,12 @@
                         <tr><td class="tiedot-label">Tyyppi</td><td class="tiedot-tieto">${tentti.tyyppi}</td></tr>
                         <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
                     </table>
-                    
+
                     <a href="/">Takaisin</a>
-                    
+
+
                 </div>
+
             </div>
 
         </div>
@@ -38,16 +40,12 @@
                 <div><input class="btn" type="submit" value="Lähetä"/></div>
             </form>
 
-            <h3>Kommentit</h3>
-            <ul>
-            <c:forEach var="kommentti" items="${kommentit}">
-                <li>${kommentti.kirjoittaja}: ${kommentti.sisalto}</li>
-            </c:forEach>
-        </ul>
+
+            </ul>
         </div>
     </div>
 </div>
-                    
+
 <jsp:include page="lomake.jsp" />                    
 
 <jsp:include page="footer.jsp" />
