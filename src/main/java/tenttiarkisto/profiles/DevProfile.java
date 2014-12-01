@@ -8,9 +8,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
+import tenttiarkisto.domain.Person;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
 import tenttiarkisto.repo.KieliRepo;
+import tenttiarkisto.repo.PersonRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.CSVService;
 import tenttiarkisto.service.KurssiService;
@@ -34,6 +36,9 @@ public class DevProfile {
 
     @Autowired
     CSVService csvService;
+    
+    @Autowired
+    PersonRepo personRepo;
 
     @PostConstruct
     @Transactional
@@ -58,6 +63,12 @@ public class DevProfile {
         Kieli en = new Kieli();
         en.setNimi("English");
         kieliRepo.save(en);
+        
+        Person admin = new Person();
+        admin.setName("pauli");
+        admin.setPassword("0000");
+        admin.setUsername("admin");
+        personRepo.save(admin);
 
         Kurssi k1 = new Kurssi("Tietorakenteet");
         kurssiService.addKurssi(k1);

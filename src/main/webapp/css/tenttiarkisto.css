@@ -53,7 +53,7 @@ form textarea:focus {
 .container.tumma form p {
 	margin:23px 0;
 }
-.container.tumma form input, .container.tumma form select {
+.container form input, .container form select, .container form textarea {
 	margin:0 auto;
 	text-align:centeR;
 	color:#000;

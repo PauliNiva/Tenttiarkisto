@@ -27,6 +27,19 @@
 
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <br/><hr/>
+            <h3>Kommentoi</h3>
+            <form action="/" method="post">
+                <div><p>Nimi:</p><input type="text" name="nimi"/></div>
+                <div><p>Kommentti:</p><textarea cols="40" rows="5" name="kommentti"></textarea></div>
+                <br/>
+                <div><input class="btn" type="submit" value="Lähetä"/></div>
+            </form>
+
+        </div>
+    </div>
 </div>
                     
 <jsp:include page="lomake.jsp" />                    
