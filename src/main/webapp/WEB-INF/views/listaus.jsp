@@ -7,8 +7,7 @@
 <input id="haku" type="text" name="haku" autocomplete="off" placeholder="Hae kurssia..." style="margin-top:10px;" />
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <c:forEach var="kurssi" items="${kurssit}">
-        <c:if test="${fn:length(kurssi.kurssinTentit) gt 0}">
+    <c:forEach var="kurssi" items="${kurssit}"> <c:if test="${fn:length(kurssi.kurssinTentit) gt 0}">
             <div class="panel-heading" role="tab" id="heading${kurssi.id}">
               <h4 class="panel-title">
                 <a class="kurssilinkki" data-toggle="collapse" data-parent="#accordion" href="#collapse${kurssi.id}" aria-expanded="true" aria-controls="collapse${kurssi.id}">
@@ -24,6 +23,5 @@
                 </c:forEach>
               </div>
             </div>
-        </c:if>
-    </c:forEach>  
+        </c:if> </c:forEach>  
 </div>
