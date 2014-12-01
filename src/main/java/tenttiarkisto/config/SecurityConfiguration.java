@@ -20,7 +20,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
                 
         http.authorizeRequests()
-                .anyRequest().permitAll();
+                .antMatchers("/kurssit/*").permitAll()
+                .antMatchers("/kurssit").permitAll()
+                .antMatchers("/tentit/*").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/assets/*/*").permitAll()
+                .antMatchers("/assets/*/*/*").permitAll()
+                .antMatchers("/kirjaudu").permitAll()
+                .antMatchers("/kommentit/*").permitAll()
+                
+                .antMatchers("/kurssis").permitAll()
+                .antMatchers("/kurssis/*").permitAll()
+                .antMatchers("/tenttis").permitAll()
+                .antMatchers("/tenttis/*").permitAll()
+                
+                .anyRequest().authenticated();
 
         http.formLogin()
                 .loginPage("/kirjaudu")
