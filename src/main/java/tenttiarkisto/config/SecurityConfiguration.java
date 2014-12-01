@@ -19,26 +19,24 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable();
                 
-//        http.authorizeRequests()
-//                .antMatchers("/kurssit/*").permitAll()
-//                .antMatchers("/kurssit").permitAll()
-//                .antMatchers("/tentit/*").permitAll()
-//                .antMatchers("/").permitAll()
-//                .antMatchers("/assets/*/*").permitAll()
-//                .antMatchers("/assets/*/*/*").permitAll()
-//                .antMatchers("/assets/*/*/*/*").permitAll()
-//                .antMatchers("/kirjaudu").permitAll()
-//                .antMatchers("/tervetuloa").permitAll()
-//                .antMatchers("/kommentit/*").permitAll()
-//                
-//                .antMatchers("/kurssis").permitAll()
-//                .antMatchers("/kurssis/*").permitAll()
-//                .antMatchers("/tenttis").permitAll()
-//                .antMatchers("/tenttis/*").permitAll()
-//                
-//                .anyRequest().authenticated();
-
-        http.authorizeRequests().anyRequest().permitAll();
+        http.authorizeRequests()
+                .antMatchers("/kurssit/*").permitAll()
+                .antMatchers("/kurssit").permitAll()
+                .antMatchers("/tentit/*").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/assets/*/*").permitAll()
+                .antMatchers("/assets/*/*/*").permitAll()
+                .antMatchers("/assets/*/*/*/*").permitAll()
+                .antMatchers("/kirjaudu").permitAll()
+                .antMatchers("/tervetuloa").permitAll()
+                .antMatchers("/kommentit/*").permitAll()
+                
+                .antMatchers("/kurssis").permitAll()
+                .antMatchers("/kurssis/*").permitAll()
+                .antMatchers("/tenttis").permitAll()
+                .antMatchers("/tenttis/*").permitAll()
+                
+                .anyRequest().authenticated();
         
         
         http.formLogin()
