@@ -34,7 +34,7 @@ public class DefaultController {
         return "redirect:/kurssit";
     }
 
-    @RequestMapping(value = "kirjaudu", method = RequestMethod.GET)
+    @RequestMapping(value = "/kirjaudu", method = RequestMethod.GET)
     public String kirjautumisNakyma(Model model) {
         return "/WEB-INF/views/kirjaudu.jsp";
     }

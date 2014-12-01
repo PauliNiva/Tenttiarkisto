@@ -23,16 +23,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest().permitAll();
 
         http.formLogin()
-                .loginPage("/login")
-                .loginProcessingUrl("/authenticate")
-                .defaultSuccessUrl("/index")
-                .usernameParameter("username")
-                .passwordParameter("password")
+                .loginPage("/kirjaudu")
+                .loginProcessingUrl("/tervetuloa")
+                .defaultSuccessUrl("/kurssit")
+                .usernameParameter("kayttaja")
+                .passwordParameter("salasana")
                 .permitAll();
 
         http.logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login")
+                .logoutSuccessUrl("/kirjaudu")
                 .permitAll()
                 .invalidateHttpSession(true);
 
