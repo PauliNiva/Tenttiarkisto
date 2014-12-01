@@ -20,6 +20,8 @@
                         <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
                     </table>
                     
+                    <p><input type="submit" value="poista tentti" class="btn"/></p>
+                    
                     <a href="/">Takaisin</a>
                     
                 </div>

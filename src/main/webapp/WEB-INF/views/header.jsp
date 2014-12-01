@@ -2,7 +2,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
 
@@ -66,6 +66,9 @@
                     </li>
                     <li>
                         <a href="/kirjaudu">Kirjaudu</a>
+                    </li>
+                    <li>
+                        <a href="/uloskirjaudu">Kirjaudu ulos</a>
                     </li>
                 </ul>
             </div>
