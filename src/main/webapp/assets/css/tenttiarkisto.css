@@ -68,6 +68,16 @@ form textarea:focus {
 	padding:20px 0;
 	text-align:centeR;
 }
+.container.keski .btn {
+    background:#7cadb4;
+    color:#FFF;
+}
+.container.keski input, .container.keski textarea {
+    border:1px solid #555;
+}
+.container.keski form p {
+    margin-bottom:5px;
+}
 a.btn {
 	text-decoration:none;
 }
