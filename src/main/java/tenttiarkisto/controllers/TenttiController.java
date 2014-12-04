@@ -3,16 +3,22 @@ package tenttiarkisto.controllers;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+import javax.transaction.Transactional;
 import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import tenttiarkisto.domain.Kieli;
@@ -92,5 +98,12 @@ public class TenttiController {
         redirectAttributes.addAttribute("id", id);
 
         return "redirect:/tentit/{id}";
+    }
+    
+    @Secured("ROLE_ADMIN")
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String poistaTentti(@PathVariable Long id) {
+        tenttiService.removeTentti(id);
+        return "redirect:/kurssit";
     }
 }
