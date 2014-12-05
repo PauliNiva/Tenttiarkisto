@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="header.jsp" />
@@ -20,12 +21,14 @@
                         <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
                     </table>
 
-                    <p>
-                    <form action="/tentit/${id}" method="POST">
-                        <input type="hidden" name="_method" value="DELETE"/>
-                        <input type="submit" value="poista tentti" class="btn"/>
-                    </form>
-                    </p>
+                    <sec:authorize access="hasRole('ROLE_ADMIN')">
+                        <p>
+                        <form action="/tentit/${id}" method="POST">
+                            <input type="hidden" name="_method" value="DELETE"/>
+                            <input type="submit" value="poista tentti" class="btn"/>
+                        </form>
+                        </p>
+                    </sec:authorize>
 
 
                     <a href="/">Takaisin</a>
@@ -41,7 +44,7 @@
         <c:forEach var="kommentti" items="${tentti.tentinKommentit}"> 
             <div class="panel-heading">
                 <p class="kommentinkirjoittaja"><strong>${kommentti.kirjoittaja}</strong> (${kommentti.pvm})</span></p>
-              <p class="kommentinsisalto">${kommentti.sisalto}</p>
+                <p class="kommentinsisalto">${kommentti.sisalto}</p>
             </div>
         </c:forEach>  
     </div>                        
@@ -56,7 +59,7 @@
                 <div><input class="btn" type="submit" value="Lähetä"/></div>
             </form>
 
-            
+
             <br/>
         </div>
     </div>
