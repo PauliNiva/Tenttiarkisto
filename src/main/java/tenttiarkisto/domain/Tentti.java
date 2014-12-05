@@ -13,7 +13,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-public class Tentti extends AbstractPersistable<Long> {
+public class Tentti extends AbstractPersistable<Long> implements Comparable<Tentti> {
 
     @NotNull
     @Temporal(TemporalType.DATE)
@@ -106,6 +106,11 @@ public class Tentti extends AbstractPersistable<Long> {
 
     public void setTentinKommentit(List<Kommentti> tentinKommentit) {
         this.tentinKommentit = tentinKommentit;
+    }
+
+    @Override
+    public int compareTo(Tentti that) {
+        return this.getPvm().compareTo(that.getPvm());
     }
 
 }
