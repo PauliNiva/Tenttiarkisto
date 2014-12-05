@@ -1,5 +1,6 @@
 package tenttiarkisto.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -48,6 +49,7 @@ public class Tentti extends AbstractPersistable<Long> {
         this.tyyppi = tyyppi;
         this.kieli = kieli;
         this.fileURL = fileURL;
+        this.tentinKommentit = new ArrayList<>();
     }
 
     public Date getPvm() {

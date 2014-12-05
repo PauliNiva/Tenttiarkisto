@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
@@ -12,6 +13,7 @@ import tenttiarkisto.auth.JpaAuthenticationProvider;
 
 @Configuration
 @EnableWebMvcSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, proxyTargetClass = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
@@ -20,8 +22,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
                 
         http.authorizeRequests()
-                .anyRequest().permitAll();
-
+                .antMatchers("/kurssit/*").permitAll()
+                .antMatchers("/kurssit").permitAll()
+                .antMatchers("/tentit/*").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/assets/*/*").permitAll()
+                .antMatchers("/assets/*/*/*").permitAll()
+                .antMatchers("/assets/*/*/*/*").permitAll()
+                .antMatchers("/kirjaudu").permitAll()
+                .antMatchers("/tervetuloa").permitAll()
+                .antMatchers("/kommentit/*").permitAll()
+                
+                .antMatchers("/kurssis").permitAll()
+                .antMatchers("/kurssis/*").permitAll()
+                .antMatchers("/tenttis").permitAll()
+                .antMatchers("/tenttis/*").permitAll()
+                
+                .anyRequest().authenticated();
+        
+        
         http.formLogin()
                 .loginPage("/kirjaudu")
                 .loginProcessingUrl("/tervetuloa")

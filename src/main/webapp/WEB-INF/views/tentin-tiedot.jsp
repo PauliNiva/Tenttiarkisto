@@ -20,11 +20,17 @@
                         <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
                     </table>
 
+                    <p>
+                    <form action="/tentit/${id}" method="POST">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <input type="submit" value="poista tentti" class="btn"/>
+                    </form>
+                    </p>
+
+
                     <a href="/">Takaisin</a>
 
-
                 </div>
-
             </div>
 
         </div>
@@ -40,8 +46,8 @@
                 <div><input class="btn" type="submit" value="Lähetä"/></div>
             </form>
 
-
-            </ul>
+            
+            <br/>
         </div>
     </div>
 </div>

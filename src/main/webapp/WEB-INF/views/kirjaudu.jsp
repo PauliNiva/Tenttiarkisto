@@ -11,12 +11,20 @@
 
                 <form action="/tervetuloa" method="POST">
                     <div><p>Käyttäjä:</p><input type="text" name="kayttaja"/></div>
-                    <div><p>Salasana:</p><input type="salasana" name="salasana"/></div>
-                    <div><input type="submit" value="Kirjaudu"/></div>
+                    <div><p>Salasana:</p><input type="text" name="salasana"/></div><br/>
+                    <div><input class="btn" type="submit" value="Kirjaudu"/></div>
                 </form>
-
+                <br/>
             </div>
         </div>
     </div>
+    
+    <header class="intro-header">
+    <div class="container tumma" id="lomake">
+        <div class="row">
+            
+        </div>
+    </div>
+    </header>
 
     <jsp:include page="footer.jsp" />

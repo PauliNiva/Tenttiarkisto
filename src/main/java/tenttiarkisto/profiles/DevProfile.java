@@ -3,6 +3,7 @@ package tenttiarkisto.profiles;
 import java.util.Date;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -39,16 +40,16 @@ public class DevProfile {
 
     @Autowired
     CSVService csvService;
-    
+
     @Autowired
     PersonRepo personRepo;
 
     @Autowired
     KommenttiService kommenttiService;
-    
-    @Autowired 
+
+    @Autowired
     KommenttiRepo kommenttiRepo;
-    
+
     @PostConstruct
     @Transactional
     public void init() {
@@ -72,7 +73,7 @@ public class DevProfile {
         Kieli en = new Kieli();
         en.setNimi("English");
         kieliRepo.save(en);
-        
+
         Person admin = new Person();
         admin.setName("pauli");
         admin.setPassword("0000");
@@ -96,10 +97,15 @@ public class DevProfile {
         kurssiService.addKurssi(new Kurssi("Käyttöjärjestelmät"));
         kurssiService.addKurssi(new Kurssi("Johdatus tekoälyyn"));
         kurssiService.addKurssi(new Kurssi("Ohjelmistotuotanto"));
-        
+
         Kommentti kommentti = new Kommentti();
         kommentti.setKirjoittaja("Olli Opiskelija");
         kommentti.setSisalto("Helppo tentti!");
+        kommentti.setKommentoituTentti(k1.getKurssinTentit().get(1));
+        Logger log = Logger.getLogger(DevProfile.class);
+        log.warn("haettu tentti:" + kommentti.getKommentoituTentti());
+        log.warn(kommentti.getKommentoituTentti().getTentinKommentit());
         kommenttiService.addKommentti(kommentti);
+
     }
 }

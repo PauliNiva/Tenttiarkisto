@@ -1,6 +1,8 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
 
@@ -12,20 +14,20 @@
 
     <title>Tenttiarkisto</title>
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/css/clean-blog.css" rel="stylesheet">
+    <link href="/assets/css/clean-blog.css" rel="stylesheet">
     <!-- jQuery UI -->
-    <link href="/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/jquery-ui/jquery-ui.css" rel="stylesheet">
     <!-- bootstrapvalidator -->
     <%--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>--%>
     <!-- Tenttiarkisto CSS -->
-    <link href="/css/tenttiarkisto.css" rel="stylesheet">
+    <link href="/assets/css/tenttiarkisto.css" rel="stylesheet">
     <!-- Select2 CSS -->
-    <link href="/select2/select2.css" rel="stylesheet">
+    <link href="/assets/select2/select2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -65,6 +67,9 @@
                     <li>
                         <a href="/kirjaudu">Kirjaudu</a>
                     </li>
+                    <li>
+                        <a href="/uloskirjaudu">Kirjaudu ulos</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -80,7 +85,9 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1>Tenttiarkisto</h1>
-			<p><a href="#lomake" class="btn btn-default lisaauusi">Lisää uusi tentti</a></p>
+                        <c:if test="${not fn:endsWith(pageContext.request.requestURI, 'kirjaudu.jsp')}">
+                            <p><a href="#lomake" class="btn btn-default lisaauusi">Lisää uusi tentti</a></p>
+                        </c:if>
                     </div>
                 </div>
             </div>
