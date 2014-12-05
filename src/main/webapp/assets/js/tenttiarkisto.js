@@ -31,3 +31,28 @@ $(function() {
 });
 
 $('#lomakeform').parsley(options);
+
+
+
+window.ParsleyConfig = {
+    validators: {
+        cantmin: {
+            fn: function (value, requirement) {
+                //return value !== requirement;
+                if ($("#campoprofesionales").val())
+                    if($("#campoprofesionales").val().length > 1) 
+                        {return true} 
+                    else {return false}
+            },
+            priority: 32
+        }
+    },
+    i18n: {
+        en: {
+            cantmin: 'You have to select at least %s items from the list'
+        },
+        fi: {
+            cantmin: 'Valitse kurssi.'
+        }
+    }
+};

@@ -24,6 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/kurssit/*").permitAll()
                 .antMatchers("/kurssit").permitAll()
+                .antMatchers("/tentit").permitAll()
                 .antMatchers("/tentit/*").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/assets/*/*").permitAll()

@@ -32,7 +32,7 @@
                     <p>Päivämäärä</p><input type="text" name="pvm" id="datepicker" required />
 
                     <p>Tyyppi</p>
-                    <select name="tyyppi" required>
+                    <select name="tyyppi" required data-parsley-cantmin="1">
                         <c:forEach var="tyyppi" items="${tyypit}">
                             <option value="${tyyppi.id}">${tyyppi}</option>
                         </c:forEach>
