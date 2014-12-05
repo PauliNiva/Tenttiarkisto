@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/assets/*/*/*/*").permitAll()
                 .antMatchers("/kirjaudu").permitAll()
                 .antMatchers("/tervetuloa").permitAll()
-                .antMatchers("/kommentit/*").permitAll()
+                .antMatchers("/tentit/*/kommentit").permitAll()
                 
                 .antMatchers("/kurssis").permitAll()
                 .antMatchers("/kurssis/*").permitAll()

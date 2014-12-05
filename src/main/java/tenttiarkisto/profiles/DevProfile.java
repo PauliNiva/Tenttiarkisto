@@ -102,6 +102,7 @@ public class DevProfile {
         kommentti.setKirjoittaja("Olli Opiskelija");
         kommentti.setSisalto("Helppo tentti!");
         kommentti.setKommentoituTentti(k1.getKurssinTentit().get(1));
+        k1.getKurssinTentit().get(1).getTentinKommentit().add(kommentti);
         Logger log = Logger.getLogger(DevProfile.class);
         log.warn("haettu tentti:" + kommentti.getKommentoituTentti());
         log.warn(kommentti.getKommentoituTentti().getTentinKommentit());
