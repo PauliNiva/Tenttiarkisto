@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1">
                     <a class="tiedot-linkki" href="${tentti.fileURL}">Katso tentti tästä <div class="glyphicon glyphicon-log-in"></div></a><br/><br/>
-                    
+
                     <table class="table tiedot">
                         <tr><td class="tiedot-label">Kurssi</td><td class="tiedot-tieto">${tentti.kurssi.nimi}</td></tr>
                         <tr><td class="tiedot-label">Päivämäärä</td><td class="tiedot-tieto">${tentti.pvm}</td></tr>
@@ -19,37 +19,49 @@
                         <tr><td class="tiedot-label">Tyyppi</td><td class="tiedot-tieto">${tentti.tyyppi}</td></tr>
                         <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
                     </table>
-                    
+
                     <p>
                     <form action="/tentit/${id}" method="POST">
                         <input type="hidden" name="_method" value="DELETE"/>
                         <input type="submit" value="poista tentti" class="btn"/>
-                        </form>
+                    </form>
                     </p>
-                   
-                    
+
+
                     <a href="/">Takaisin</a>
-                    
+
                 </div>
             </div>
 
         </div>
     </div>
+    <div class="row kommentit">
+        <br/><hr/>
+        <h3>Kommentit</h3><br/>
+        <c:forEach var="kommentti" items="${tentti.tentinKommentit}"> 
+            <div class="panel-heading">
+              <p class="kommentinkirjoittaja">${kommentti.kirjoittaja}</p>
+              <p class="kommentinsisalto">${kommentti.sisalto}</p>
+            </div>
+        </c:forEach>  
+    </div>                        
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <br/><hr/>
-            <h3>Kommentoi</h3>
-            <form action="/" method="post">
+            <br/>
+            <h4>Lisää kommentti</h4>
+            <form action="/tentit/${tentti.id}/kommentit" method="post">
                 <div><p>Nimi:</p><input type="text" name="nimi"/></div>
                 <div><p>Kommentti:</p><textarea cols="40" rows="5" name="kommentti"></textarea></div>
                 <br/>
                 <div><input class="btn" type="submit" value="Lähetä"/></div>
             </form>
+
+            
             <br/>
         </div>
     </div>
 </div>
-                    
+
 <jsp:include page="lomake.jsp" />                    
 
 <jsp:include page="footer.jsp" />
