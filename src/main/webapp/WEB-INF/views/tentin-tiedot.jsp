@@ -40,7 +40,7 @@
         <h3>Kommentit</h3><br/>
         <c:forEach var="kommentti" items="${tentti.tentinKommentit}"> 
             <div class="panel-heading">
-              <p class="kommentinkirjoittaja">${kommentti.kirjoittaja}</p>
+                <p class="kommentinkirjoittaja"><strong>${kommentti.kirjoittaja}</strong> (${kommentti.pvm})</span></p>
               <p class="kommentinsisalto">${kommentti.sisalto}</p>
             </div>
         </c:forEach>  
