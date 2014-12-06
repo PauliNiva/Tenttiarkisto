@@ -24,6 +24,7 @@
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <p>
                         <form action="/tentit/${id}" method="POST">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                             <input type="hidden" name="_method" value="DELETE"/>
                             <input type="submit" value="poista tentti" class="btn"/>
                         </form>
@@ -53,6 +54,7 @@
             <br/>
             <h4>Lisää kommentti</h4>
             <form action="/tentit/${tentti.id}/kommentit" method="post">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                 <div><p>Nimi:</p><input type="text" name="nimi"/></div>
                 <div><p>Kommentti:</p><textarea cols="40" rows="5" name="kommentti"></textarea></div>
                 <br/>
