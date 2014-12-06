@@ -47,9 +47,6 @@ public class TenttiController {
     @Autowired
     KieliRepo kieliRepo;
     
-    @Autowired
-    KommenttiService kommenttiService;
-
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String show(Model model, @PathVariable Long id) {
         model.addAttribute("tentti", tenttiService.get(id));
