@@ -46,6 +46,15 @@
             <div class="panel-heading">
                 <p class="kommentinkirjoittaja"><strong>${kommentti.kirjoittaja}</strong> (${kommentti.pvm})</span></p>
                 <p class="kommentinsisalto">${kommentti.sisalto}</p>
+                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                    <p>
+                    <form action="/kommentit/${id}" method="POST">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <input type="submit" value="poista kommentti" class="btn"/>
+                    </form>
+                    </p>
+                </sec:authorize>
             </div>
         </c:forEach>  
     </div>                        
