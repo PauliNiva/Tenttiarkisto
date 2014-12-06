@@ -27,6 +27,7 @@ import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
 import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.TyyppiRepo;
+import tenttiarkisto.service.KommenttiService;
 import tenttiarkisto.service.KurssiService;
 import tenttiarkisto.service.TenttiService;
 
@@ -45,6 +46,9 @@ public class TenttiController {
     
     @Autowired
     KieliRepo kieliRepo;
+    
+    @Autowired
+    KommenttiService kommenttiService;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String show(Model model, @PathVariable Long id) {

@@ -2,6 +2,7 @@
 package tenttiarkisto.domain;
 
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -19,7 +20,7 @@ public class Kommentti extends AbstractPersistable<Long>{
 //    @ManyToOne
     private String kirjoittaja;
     
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     private Tentti kommentoituTentti;
     
     public Kommentti(){

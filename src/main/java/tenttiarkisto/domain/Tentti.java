@@ -3,6 +3,7 @@ package tenttiarkisto.domain;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -34,7 +35,7 @@ public class Tentti extends AbstractPersistable<Long> implements Comparable<Tent
     @ManyToOne
     private Kieli kieli;
     
-    @OneToMany
+    @OneToMany(cascade=CascadeType.REMOVE, mappedBy = "kommentoituTentti")
     private List<Kommentti> tentinKommentit;
     
     private String fileURL;
