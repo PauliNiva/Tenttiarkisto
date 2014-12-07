@@ -38,6 +38,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/tenttis").permitAll()
                 .antMatchers("/tenttis/*").permitAll()
                 
+                .antMatchers("/logout").hasRole("ADMIN")
+                
                 .anyRequest().authenticated();
         
         http.formLogin()

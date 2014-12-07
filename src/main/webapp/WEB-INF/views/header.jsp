@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="fi">
@@ -66,10 +67,12 @@
                     </li>
                     <li>
                         <a href="/kirjaudu">Kirjaudu</a>
-                    </li>
+                    </li>                 
                     <li>
-                        <a href="/uloskirjaudu">Kirjaudu ulos</a>
-                    </li>
+                        <sec:authorize url="/uloskirjaudu">
+                        <a href="/logout">Kirjaudu ulos</a>
+                        </sec:authorize>
+                    </li>                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
