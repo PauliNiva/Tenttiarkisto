@@ -12,7 +12,7 @@
                 <form action="/tervetuloa" method="POST">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                     <div><p>Käyttäjä:</p><input type="text" name="kayttaja"/></div>
-                    <div><p>Salasana:</p><input type="text" name="salasana"/></div><br/>
+                    <div><p>Salasana:</p><input type="password" name="salasana"/></div><br/>
                     <div><input class="btn" type="submit" value="Kirjaudu"/></div>
                 </form>
                 <br/>
