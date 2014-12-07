@@ -1,0 +1,174 @@
+Data Compression Techniques/121116_Karkkainen_EK_en.pdf
+Data Compression Techniques/130412_Karkkainen_EK_en.pdf
+Randomized Algorithms II/130429_Kivinen_KK_en.pdf
+Tietokoneen rakenne/120918_Niklander_EK_fi.pdf
+Tietokoneen rakenne/130412_Niklander_EK_fi.pdf
+Laskennan mallit/130412_Pasanen_EK_fi.pdf
+Laskennan mallit/111020_Kivinen_VK1_fi.pdf
+Laskennan mallit/111216_Kivinen_VK2_fi.pdf
+Laskennan mallit/131213_Pasanen_VK2_fi.pdf
+Laskennan mallit/101021_Kivinen_VK1_fi.pdf
+Laskennan mallit/101216_Kivinen_VK2_fi.pdf
+Ohjelmoinnin jatkokurssi/131209_Luukkainen_KK_fi.pdf
+Ohjelmoinnin jatkokurssi/140404_Luukkainen_EK_fi.pdf
+Ohjelmoinnin jatkokurssi/130429_Luukkainen_KK_fi.pdf
+Ohjelmoinnin jatkokurssi/140131_Luukkainen_EK_en.pdf
+Ohjelmoinnin jatkokurssi/140131_Luukkainen_EK_fi.pdf
+Ohjelmoinnin jatkokurssi/121210_Luukkainen_KK_fi.pdf
+Mobile Middleware/130503_Tarkoma_KK_en.pdf
+Health Informatics/121127_Puustjarvi_EK_en.pdf
+Semanttinen web/131115_Puustjärvi_EK_fi.pdf
+Semanttinen web/140124_Puustjärvi_EK_fi.pdf
+Hajautetut tietokannat/140131_Nurmi_EK_fi.pdf
+Hajautetut tietokannat/121116_Nurmi_EK_fi.pdf
+Game Engine Architecture/130416_Vihavainen_EK_en.pdf
+Tietokannan suunnittelu/121120_Nurmi_EK_fi.pdf
+Tietokannan suunnittelu/140124_Nurmi_EK_fi.pdf
+Tietokannan suunnittelu/130412_Nurmi_EK_fi.pdf
+Web-palvelinohjelmointi Java/121123_Vihavainen_EK_fi.pdf
+Web-palvelinohjelmointi Java/140204_Vihavainen_EK_fi.pdf
+Information-Theoretic Modeling/121123_Kivinen_EK_en.pdf
+Introduction to Machine Learning/111213_Hoyer_KK_en.pdf
+Introduction to Machine Learning/140204_Kivinen_EK_en.pdf
+Introduction to Machine Learning (Coursera)/130412_Hoyer_EK_en.pdf
+Introduction to Machine Learning/130412_Hoyer_EK_en.pdf
+Introduction to Machine Learning/120131_Hoyer_EK_en.pdf
+Introduction to Machine Learning (Coursera)/140204_Kivinen_EK_en.pdf
+Introduction to Machine Learning/101214_Hoyer_KK_en.pdf
+Ohjelmistotuotanto/121120_Luukkainen_EK_fi.pdf
+Ohjelmistotuotanto/130502_Luukkainen_KK_fi.pdf
+Ohjelmistotuotanto/140204_Luukkainen_EK_fi.pdf
+Käyttöjärjestelmät/140226_Kerola_VK1_en.pdf
+Käyttöjärjestelmät/131115_Kerola_EK_fi.pdf
+Käyttöjärjestelmät/140124_Kerola_EK_fi.pdf
+Käyttöjärjestelmät/130227_Kerola_VK1_fi.pdf
+Käyttöjärjestelmät/140226_Kerola_VK1_fi.pdf
+Käyttöjärjestelmät/140124_Kerola_EK_en.pdf
+Käyttöjärjestelmät/121116_Niklander_EK_fi.pdf
+Ohjelmistoarkkitehtuurit/131016_Tuovinen_KK_fi.pdf
+Ohjelmistoarkkitehtuurit/140128_Tuovinen_EK_fi.pdf
+Ohjelmistoarkkitehtuurit/121123_Tuovinen_EK_fi.pdf
+Ohjelmistoprojektien johtaminen ja ryhmädynamiikka/121210_Wikla_KK_fi.pdf
+Ohjelmointikielten periaatteet/131115_Wikla_EK_fi.pdf
+Ohjelmointikielten periaatteet/130419_Wikla_EK_fi.pdf
+Algorithms for Bioinformatics/130416_Salmela_EK_en.pdf
+Algorithms for Bioinformatics/121127_Salmela_EK_en.pdf
+Ohjelmistojen vaatimusmäärittely/131211_Laine_KK_fi.pdf
+Programming in Scala/121121_Pohjalainen_EK_en.pdf
+Ohjelmistoprosessit ja ohjelmistojen laatu/130412_Paakki_EK_fi.pdf
+Service-Oriented Software Engineering/140227_Kutvonen_KK_en.pdf
+Transaktioiden hallinta/140226_Nurmi_KK_fi.pdf
+Unsupervised Machine Learning/131115_Hyvärinen_EK_en.pdf
+Unsupervised Machine Learning/140131_Hyvärinen_EK_en.pdf
+Unsupervised Machine Learning/130412_Hyvarinen_EK_en.pdf
+Unsupervised Machine Learning/121116_Hyvarinen_EK_en.pdf
+Palveluperustaisten liiketoimintaprosessien suunnittelu ja toteuttaminen/140408_Puustjärvi_EK_fi.pdf
+Palveluperustaisten liiketoimintaprosessien suunnittelu ja toteuttaminen/140131_Puustjärvi_EK_fi.pdf
+Software Measurement and Quality Modeling/140124_Münch_EK_en.pdf
+Rinnakkaislaskenta grafiikkasuorittimilla/130502_Nurmi_KK_fi.pdf
+Rinnakkaisohjelmointi/121112_Kerola_EK_fi.pdf
+Introduction to Computational Creativity/140124_Toivonen_KK_en.pdf
+Supervised Machine Learning/140226_Kivinen_KK_en.pdf
+Supervised Machine Learning/130419_Kivinen_EK_en.pdf
+Software Process Definition and Management/121120_Münch_EK_en.pdf
+Design and Analysis of Algorithms/140128_Koivisto_EK_en.pdf
+Design and Analysis of Algorithms/140404_Koivisto_EK_en.pdf
+Design and Analysis of Algorithms/121127_Koivisto_EK_en.pdf
+Distributed Systems/140404_Kangasharju_EK_en.pdf
+Distributed Systems/121212_Ruohomaa_KK_en.pdf
+Distributed Systems/120921_Kangasharju_EK_en.pdf
+Distributed Systems/140131_Kangasharju_EK_en.pdf
+Biological Sequence Analysis/140227_Ukkonen_KK_en.pdf
+Human-Computer Interaction/130429_Jacucci_KK_en.pdf
+Ohjelmistojen testaus/140204_Tuovinen_EK_fi.pdf
+Programming in C/101021_Kuuppelomaki_KK_en.pdf
+Programming in C/131126_Karvi_EK_en.pdf
+Programming in C/121127_Karvi_EK_en.pdf
+String Processing Algorithms/140408_Kärkkäinen_EK_en.pdf
+String Processing Algorithms/131212_Kärkkäinen_KK_en.pdf
+Tietokantojen perusteet/140226_Laine_KK_fi.pdf
+Tietokantojen perusteet/121127_Laine_EK_fi.pdf
+Tietokantojen perusteet/140128_Laine_EK_fi.pdf
+Tietokantojen perusteet/130412_Laine_EK_fi.pdf
+Tietokoneen toiminta/120503_Kerola_KK_fi.pdf
+Tietokoneen toiminta/140404_Kerola_EK_en.pdf
+Tietokoneen toiminta/140404_Kerola_EK_fi.pdf
+Tietokoneen toiminta/130502_Kerola_KK_fi.pdf
+Tietokoneen toiminta/140204_Kerola_EK_fi.pdf
+Tietokoneen toiminta/121213_Kerola_KK_fi.pdf
+Ohjelmointitekniikka (C++)/101215_vihavainen_KK_fi.pdf
+Johdatus tekoälyyn/101022_Pasanen_KK_fi.pdf
+Johdatus tekoälyyn/140131_Roos_EK_fi.pdf
+Johdatus tekoälyyn/121123_Roos_EK_fi.pdf
+Johdatus tekoälyyn/130416_Roos_EK_fi.pdf
+Johdatus tekoälyyn/131018_Roos_KK_fi.pdf
+Johdatus tekoälyyn/111021_Roos_KK_fi.pdf
+Cryptography and Network Security/140204_Karvi_EK_en.pdf
+Cryptography and Network Security/130416_Karvi_EK_en.pdf
+Web-selainohjelmointi/121211_Vihavainen_KK_fi.pdf
+Web-selainohjelmointi/130416_Vihavainen_EK_fi.pdf
+Overlay and P2P Networks/121123_Tarkoma_EK_en.pdf
+Overlay and P2P Networks/130419_Tarkoma_EK_en.pdf
+Overlay and P2P Networks/140226_Tarkoma_KK_en.pdf
+Internet Protocols/140408_Kojo_EK_en.pdf
+Internet Protocols/121016_Kojo_KK_en.pdf
+Internet Protocols/121127_Kojo_EK_en.pdf
+Ohjelmointitekniikka (Scala)/100503_Wikla_KK_fi.pdf
+Ohjelmointitekniikka (Scala)/130419_Wikla_EK_fi.pdf
+Ohjelmointitekniikka (Scala)/120228_Wikla_KK_fi.pdf
+Tietorakenteet ja algoritmit/140408_Floreen_EK_fi.pdf
+Tietorakenteet ja algoritmit/140224_Floreen_VK1_fi.pdf
+Tietorakenteet ja algoritmit/140224_Floreen_VK1_en.pdf
+Tietorakenteet ja algoritmit/121127_Floreen_EK_fi.pdf
+Tietorakenteet ja algoritmit/140128_Floreen_EK_fi.pdf
+Tietorakenteet ja algoritmit/131209_Floreen_VK2_fi.pdf
+Tietorakenteet ja algoritmit/140128_Floreen_EK_en.pdf
+Tietorakenteet ja algoritmit/140408_Floreen_EK_en.pdf
+Probabilistic Models/130416_Myllymaki_EK_en.pdf
+Probabilistic Models/131115_Myllymäki_EK_en.pdf
+Ohjelmoinnin perusteet/131014_Luukkainen_KK_fi.pdf
+Ohjelmoinnin perusteet/140124_Luukkainen_EK_en.pdf
+Ohjelmoinnin perusteet/130416_Luukkainen_EK_en.pdf
+Ohjelmoinnin perusteet/080614_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/090606_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/051017_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/100612_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/060610_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/140124_Luukkainen_EK_fi.pdf
+Ohjelmoinnin perusteet/130226_Luukkainen_KK_fi.pdf
+Ohjelmoinnin perusteet/110301_Luukkainen_KK_fi.pdf
+Ohjelmoinnin perusteet/111018_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/130416_Luukkainen_EK_fi.pdf
+Ohjelmoinnin perusteet/120228_Luukkainen_KK_fi.pdf
+Ohjelmoinnin perusteet/121016_Luukkainen_KK_fi.pdf
+Ohjelmoinnin perusteet/091021_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/071017_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/061016_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/081015_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/101019_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/070609_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/121123_Luukkainen_EK_fi.pdf
+Ohjelmoinnin perusteet/080606_Wikla_KK_fi.pdf
+Ohjelmoinnin perusteet/050608_Wikla_KK_fi.pdf
+Tietoliikenteen perusteet/121211_Niklander_KK_fi.pdf
+Tietoliikenteen perusteet/111213_Tarkoma_KK_fi.pdf
+Tietoliikenteen perusteet/140131_Niklander_EK_fi.pdf
+Tietoliikenteen perusteet/140404_Niklander_EK_en.pdf
+Tietoliikenteen perusteet/140404_Niklander_EK_fi.pdf
+Tietoliikenteen perusteet/101214_Tarkoma_KK_fi.pdf
+Ohjelmointitekniikka (JavaScript)/140128_Wikla_EK_fi.pdf
+Ohjelmointitekniikka (JavaScript)/140408_Wikla_EK_fi.pdf
+XML-metakieli/131115_Laine_KK_fi.pdf
+Tietovarastot/130416_Nurmi_EK_fi.pdf
+Ohjelmistotekniikan menetelmät/140408_Luukkainen_EK_fi.pdf
+Ohjelmistotekniikan menetelmät/131211_Luukkainen_KK_fi.pdf
+Data Mining/130416_Toivonen_EK_en.pdf
+Service Ecosystems/140128_Kutvonen_EK_en.pdf
+Web-palvelinohjelmointi Ruby on Rails/140225_Luukkainen_KK_en.pdf
+Web-palvelinohjelmointi Ruby on Rails/140225_Luukkainen_KK_fi.pdf
+Tietoturvan perusteet/100615_Karvi_EK_fi.pdf
+Tietoturvan perusteet/121116_Karvi_EK_fi.pdf
+Tietoturvan perusteet/131115_Karvi_EK_en.pdf
+Tietoturvan perusteet/130416_Karvi_EK_fi.pdf
+Tietoturvan perusteet/140227_Karvi_KK_fi.pdf
+Tietoturvan perusteet/120605_Karvi_EK_fi.pdf

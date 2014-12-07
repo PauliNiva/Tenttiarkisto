@@ -1,6 +1,5 @@
 package tenttiarkisto.profiles;
 
-import java.util.Date;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 import org.apache.log4j.Logger;
@@ -8,10 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import tenttiarkisto.domain.Kieli;
-import tenttiarkisto.domain.Kommentti;
 import tenttiarkisto.domain.Kurssi;
 import tenttiarkisto.domain.Person;
-import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
 import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.PersonRepo;
@@ -53,25 +50,40 @@ public class DevProfile {
     @PostConstruct
     @Transactional
     public void init() {
+        Logger log = Logger.getLogger(DevProfile.class);
 
-        for (Kurssi kurssi : csvService.readCSV()) {
+        for (Kurssi kurssi : csvService.readKurssit()) {
             kurssiService.addKurssi(kurssi);
         }
 
         Tyyppi kk = new Tyyppi();
         kk.setTyyppi("Kurssikoe");
+        kk.setLyhenne("KK");
         tyyppiRepo.save(kk);
 
         Tyyppi ek = new Tyyppi();
         ek.setTyyppi("Erilliskoe");
+        ek.setLyhenne("EK");
         tyyppiRepo.save(ek);
+
+        Tyyppi vk1 = new Tyyppi();
+        vk1.setTyyppi("1. välikoe");
+        vk1.setLyhenne("VK1");
+        tyyppiRepo.save(vk1);
+
+        Tyyppi vk2 = new Tyyppi();
+        vk2.setTyyppi("2. välikoe");
+        vk2.setLyhenne("VK2");
+        tyyppiRepo.save(vk2);
 
         Kieli fi = new Kieli();
         fi.setNimi("Suomi");
+        fi.setLyhenne("FI");
         kieliRepo.save(fi);
 
         Kieli en = new Kieli();
         en.setNimi("English");
+        en.setLyhenne("EN");
         kieliRepo.save(en);
 
         Person admin = new Person();
@@ -79,34 +91,20 @@ public class DevProfile {
         admin.setPassword("0000");
         admin.setUsername("admin");
         personRepo.save(admin);
+        
+        csvService.loadTentit(false);
 
-        Kurssi k1 = new Kurssi("Tietorakenteet");
-        kurssiService.addKurssi(k1);
-
-        tenttiService.addTentti(new Tentti(new Date(113, 4, 24), null, k1, ek, fi, null), null);
-        tenttiService.addTentti(new Tentti(new Date(112, 4, 24), null, k1, ek, fi, null), null);
-        tenttiService.addTentti(new Tentti(new Date(114, 4, 24), null, k1, ek, fi, null), null);
-
-        Kurssi k2 = new Kurssi("Ohjelmoinnin perusteet");
-        kurssiService.addKurssi(k2);
-        tenttiService.addTentti(new Tentti(new Date(112, 10, 20), null, k2, ek, fi, null), null);
-        tenttiService.addTentti(new Tentti(new Date(114, 10, 24), null, k2, ek, fi, null), null);
-        tenttiService.addTentti(new Tentti(new Date(113, 10, 22), null, k2, ek, fi, null), null);
-
-        kurssiService.addKurssi(new Kurssi("Web-palvelinohjelmointi"));
-        kurssiService.addKurssi(new Kurssi("Käyttöjärjestelmät"));
-        kurssiService.addKurssi(new Kurssi("Johdatus tekoälyyn"));
-        kurssiService.addKurssi(new Kurssi("Ohjelmistotuotanto"));
-
-        Kommentti kommentti = new Kommentti();
-        kommentti.setKirjoittaja("Olli Opiskelija");
-        kommentti.setSisalto("Helppo tentti!");
-        kommentti.setKommentoituTentti(k1.getKurssinTentit().get(1));
-        k1.getKurssinTentit().get(1).getTentinKommentit().add(kommentti);
-        Logger log = Logger.getLogger(DevProfile.class);
-        log.warn("haettu tentti:" + kommentti.getKommentoituTentti());
-        log.warn(kommentti.getKommentoituTentti().getTentinKommentit());
-        kommenttiService.addKommentti(kommentti);
+        Kurssi k1 = kurssiService.findByName("Tietorakenteet ja algoritmit");
+        log.info(k1);
+//        Kommentti kommentti = new Kommentti();
+//        kommentti.setKirjoittaja("Olli Opiskelija");
+//        kommentti.setSisalto("Helppo tentti!");
+//        kommentti.setKommentoituTentti(k1.getKurssinTentit().get(1));
+//        k1.getKurssinTentit().get(1).getTentinKommentit().add(kommentti);
+//        Logger log = Logger.getLogger(DevProfile.class);
+//        log.warn("haettu tentti:" + kommentti.getKommentoituTentti());
+//        log.warn(kommentti.getKommentoituTentti().getTentinKommentit());
+//        kommenttiService.addKommentti(kommentti);
 
     }
 }

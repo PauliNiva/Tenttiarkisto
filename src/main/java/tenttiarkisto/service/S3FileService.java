@@ -66,12 +66,12 @@ public class S3FileService implements FileService {
     }
 
     @Override
-    public String putFile(File f) {
+    public String putFile(File f, String name) {
         try {
-            PutObjectRequest req = new PutObjectRequest(bucket, f.getName(), f);
+            PutObjectRequest req = new PutObjectRequest(bucket, name, f);
             s3.putObject(req);
 
-            return "https://s3-eu-west-1.amazonaws.com/tentit/" + f.getName();
+            return "https://s3-eu-west-1.amazonaws.com/tentit/" + name;
         } catch (AmazonServiceException ase) {
             String msg = "Caught an AmazonServiceException, which means your request made it "
                     + "to Amazon S3, but was rejected with an error response for some reason.";

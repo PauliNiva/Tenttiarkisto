@@ -37,15 +37,25 @@ public class TenttiService {
         tenttiRepo.delete(tentti);
     }
 
+    //Lisää tentin, joka on jo S3:ssa. Oletetaan .pdf-pääte.
     @Transactional
-    public void addTentti(Tentti tentti, File tenttiFile) {
+    public void addTentti(Tentti tentti) {
+        Kurssi kurssi = tentti.getKurssi();
+        kurssi.getKurssinTentit().add(tentti);
+
+        tentti.setFileURL("https://s3-eu-west-1.amazonaws.com/tentit/" + makeFilename(tentti, "pdf"));
+
+        tenttiRepo.save(tentti);
+        kurssiRepo.save(kurssi);
+    }
+
+    @Transactional
+    public void addTentti(Tentti tentti, File tenttiFile, String ext) {
         Kurssi kurssi = tentti.getKurssi();
         kurssi.getKurssinTentit().add(tentti);
 
         if (tenttiFile != null) {
-            tenttiFile.renameTo(new File(tenttiFile.getPath() + makeFilename(tentti)));
-
-            String url = fileService.putFile(tenttiFile);
+            String url = fileService.putFile(tenttiFile, makeFilename(tentti, ext));
 
             tentti.setFileURL(url);
         } else {
@@ -61,7 +71,7 @@ public class TenttiService {
         Kurssi kurssi = tentti.getKurssi();
         kurssi.getKurssinTentit().add(tentti);
 
-        String fileName = makeFilename(tentti) + '.' + ext;
+        String fileName = makeFilename(tentti, ext);
 
         String url = fileService.putFile(fileName, is, length);
 
@@ -72,13 +82,16 @@ public class TenttiService {
         return id;
     }
 
-    private static String makeFilename(Tentti tentti) {
+    private static String makeFilename(Tentti tentti, String ext) {
         StringBuilder filename = new StringBuilder();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
         filename.append(sdf.format(tentti.getPvm()));
         filename.append("-").append(tentti.getKurssi().getNimi().replaceAll("\\s", "_"));
-        filename.append("-").append(tentti.getKieli());
+        filename.append("-").append(tentti.getTyyppi().getLyhenne());
+        filename.append("-").append(tentti.getKieli().getLyhenne());
+
+        filename.append(".").append(ext);
 
         return filename.toString();
     }
