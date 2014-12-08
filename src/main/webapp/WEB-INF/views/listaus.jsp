@@ -23,7 +23,7 @@
                   <table class="table kurssintentit" align="center">
                     <c:forEach var="tentti" items="${t:sortByDate(kurssi.kurssinTentit)}">
                         <tr>
-                            <td><strong>${tentti.pvm}</strong></td><td>${tentti.tyyppi}</td><td><a href="${tentti.fileURL}"><div class="glyphicon glyphicon-download"></div></a></td><td><a href="/tentit/${tentti.id}">Tentin tiedot</a></td>
+                            <td>${tentti.tyyppi}</td><td><strong>${tentti.pvm}</strong></td><td><a href="${tentti.fileURL}"><div class="glyphicon glyphicon-download"></div></a></td><td><a href="/tentit/${tentti.id}">Tentin tiedot</a></td>
                         </tr>
                     </c:forEach>
                   </table>
