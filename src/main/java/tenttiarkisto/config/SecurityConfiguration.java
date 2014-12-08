@@ -18,7 +18,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        //http.csrf().disable();
+        http.csrf().disable();
                 
         http.authorizeRequests()
                 .antMatchers("/kurssit/*").permitAll()
@@ -52,7 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/kirjaudu")
+                .logoutSuccessUrl("/kurssit")
                 .permitAll()
                 .invalidateHttpSession(true);
 

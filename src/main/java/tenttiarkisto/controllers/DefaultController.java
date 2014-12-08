@@ -35,10 +35,10 @@ public class DefaultController {
     }
 
     @RequestMapping(value = "/kirjaudu", method = RequestMethod.GET)
-    public String kirjautumisNakyma(Model model) {
+    public String kirjautumisNakyma() {
         return "/WEB-INF/views/kirjaudu.jsp";
     }
-
+   
 //    @RequestMapping("/initializekurssit")
 //    @ResponseBody
 //    public String init() {
