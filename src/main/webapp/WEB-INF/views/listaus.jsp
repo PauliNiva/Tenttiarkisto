@@ -18,7 +18,7 @@
                 </a>
               </h4>
             </div>
-            <div id="collapse${kurssi.id}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading">
+            <div id="collapse${kurssi.id}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
               <div class="panel-body">
                   <table class="table kurssintentit" align="center">
                     <c:forEach var="tentti" items="${t:sortByDate(kurssi.kurssinTentit)}">
