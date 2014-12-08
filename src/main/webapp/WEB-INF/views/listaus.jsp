@@ -20,9 +20,13 @@
             </div>
             <div id="collapse${kurssi.id}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading">
               <div class="panel-body">
-                <c:forEach var="tentti" items="${t:sortByDate(kurssi.kurssinTentit)}">
-                    ${tentti.pvm} ${tentti.tyyppi}: <a href="${tentti.fileURL}">Avaa tentti</a> / <a href="/tentit/${tentti.id}">Tentin tiedot</a><br/>
-                </c:forEach>
+                  <table class="table kurssintentit" align="center">
+                    <c:forEach var="tentti" items="${t:sortByDate(kurssi.kurssinTentit)}">
+                        <tr>
+                            <td><strong>${tentti.pvm}</strong></td><td>${tentti.tyyppi}</td><td><a href="${tentti.fileURL}"><div class="glyphicon glyphicon-download"></div></a></td><td><a href="/tentit/${tentti.id}">Tentin tiedot</a></td>
+                        </tr>
+                    </c:forEach>
+                  </table>
               </div>
             </div>
         </c:if> </c:forEach>  

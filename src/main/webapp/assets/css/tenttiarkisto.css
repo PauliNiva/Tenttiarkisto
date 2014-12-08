@@ -104,10 +104,10 @@ a.btn {
 .tiedot-linkki {
     font-size:1.5em;
 }
-table.tiedot {
+table.tiedot, table.kurssintentit {
     border:1px solid #999;
 }
-table.tiedot tr:first-child td {
+table.tiedot tr:first-child td, table.kurssintentit tr:first-child td {
     border:none;
 }
 .collapsing {
@@ -140,4 +140,21 @@ table.tiedot tr:first-child td {
 }
 .kommentinsisalto {
 
+}
+#lisaauusilinkki {
+    display:none;
+}
+li.parsley-required {
+    color:#f7ecb5;
+}
+table.kurssintentit {
+    width:80%;
+    margin-bottom:0;
+}
+table.kurssintentit td:nth-child(odd) {
+    background:#EAF2F3;
+}
+#haku {
+    border-radius:3px;
+    padding:3px 5px;
 }

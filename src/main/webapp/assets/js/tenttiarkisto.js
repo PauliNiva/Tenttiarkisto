@@ -1,5 +1,5 @@
 // haitari
-$('.collapse').collapse();
+$('.collapse').collapse("hide");
 
 // lomakkeen kurssihaku
 $(document).ready(function() { $("#kurssihaku").select2({minimumInputLength: 2, placeholder: "Valitse kurssi"}); });
@@ -30,17 +30,26 @@ $(function() {
     $("#datepicker").datepicker({ dateFormat: "dd.mm.yy" }).val();
 });
 
-$('#lomakeform').parsley(options);
+// menuun lisää uusi tentti linkki vain scrollatessa
+$(window).scroll(function() {
+    if ($(window).scrollTop() < 100) {
+        $("li#lisaauusilinkki").hide();
+    }
+    else {
+        $("li#lisaauusilinkki").show();
+    }
+});
 
-
+//lomakevalidaatio
+$('#lomakeform').parsley();
 
 window.ParsleyConfig = {
     validators: {
         cantmin: {
             fn: function (value, requirement) {
                 //return value !== requirement;
-                if ($("#campoprofesionales").val())
-                    if($("#campoprofesionales").val().length > 1) 
+                if ($("#kurssihaku").val())
+                    if($("#kurssihaku").val().length > 1) 
                         {return true} 
                     else {return false}
             },

@@ -29,7 +29,7 @@
                             </c:forEach>
                     </select>
 
-                    <p>Päivämäärä</p><input type="text" name="pvm" id="datepicker" required />
+                    <p>Päivämäärä</p><input type="text" name="pvm" placeholder="pp.kk.vvvv" id="datepicker" data-parsley-date required />
 
                     <p>Tyyppi</p>
                     <select name="tyyppi" required data-parsley-cantmin="1">

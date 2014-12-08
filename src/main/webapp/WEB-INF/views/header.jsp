@@ -62,6 +62,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+                        <li id="lisaauusilinkki">
+                            <a href="#lomake">Lisää uusi tentti</a>
+                        </li> 
                         <li>
                             <a href="/">Etusivu</a>
                         </li>
