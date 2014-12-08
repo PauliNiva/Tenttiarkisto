@@ -20,7 +20,7 @@ public class Kommentti extends AbstractPersistable<Long>{
 //    @ManyToOne
     private String kirjoittaja;
     
-    @ManyToOne(cascade=CascadeType.REMOVE)
+    @ManyToOne
     private Tentti kommentoituTentti;
     
     public Kommentti(){
