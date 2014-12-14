@@ -23,6 +23,9 @@ public class Kommentti extends AbstractPersistable<Long>{
     @ManyToOne
     private Tentti kommentoituTentti;
     
+    @ManyToOne
+    private Mallivastaus kommentoituMallivastaus;
+    
     public Kommentti(){
     }
     
@@ -32,6 +35,12 @@ public class Kommentti extends AbstractPersistable<Long>{
         this.kommentoituTentti = kommentoituTentti;
     }
 
+    public Kommentti(String sisalto, String kirjoittaja, Mallivastaus kommentoituMallivastaus){
+        this.sisalto = sisalto;
+        this.kirjoittaja = kirjoittaja;
+        this.kommentoituMallivastaus = kommentoituMallivastaus;
+    }
+    
     public Tentti getKommentoituTentti() {
         return kommentoituTentti;
     }
@@ -64,5 +73,11 @@ public class Kommentti extends AbstractPersistable<Long>{
         this.kirjoittaja = kirjoittaja;
     }
     
-    
+    public Tentti getKommentoituMallivastaus() {
+        return kommentoituTentti;
+    }
+
+    public void setKommentoituMallivastaus(Mallivastaus kommentoituMallivastaus) {
+        this.kommentoituMallivastaus = kommentoituMallivastaus;
+    }
 }
