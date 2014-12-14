@@ -39,6 +39,9 @@ public class Tentti extends AbstractPersistable<Long> implements Comparable<Tent
     private List<Kommentti> tentinKommentit;
     
     private String fileURL;
+    
+    @OneToMany
+    private List<Mallivastaus> tentinMallivastaukset;
 
     public Tentti() {
     }
@@ -51,6 +54,7 @@ public class Tentti extends AbstractPersistable<Long> implements Comparable<Tent
         this.kieli = kieli;
         this.fileURL = fileURL;
         this.tentinKommentit = new ArrayList<>();
+        this.tentinMallivastaukset = new ArrayList<>();
     }
 
     public Date getPvm() {
@@ -113,5 +117,12 @@ public class Tentti extends AbstractPersistable<Long> implements Comparable<Tent
     public int compareTo(Tentti that) {
         return this.getPvm().compareTo(that.getPvm());
     }
-
+    
+    public List<Mallivastaus> getTentinMallivastaukset() {
+        return tentinMallivastaukset;
+    }
+    
+    public void setTentinMallivastaus(List<Mallivastaus> tentinMallivastaukset) {
+        this.tentinMallivastaukset = tentinMallivastaukset;
+    }
 }
