@@ -23,7 +23,7 @@
 
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <p>
-                        <form action="/tentit/${id}" method="POST">
+                        <form action="/tentit/${id}" method="POST" onsubmit="return confirm('Haluatko varmasti poistaa tentin?');">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                             <input type="hidden" name="_method" value="DELETE"/>
                             <input type="submit" value="poista tentti" class="btn"/>
@@ -48,7 +48,7 @@
                 <p class="kommentinsisalto">${kommentti.sisalto}</p>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <p>
-                    <form action="/tentit/${tentti.id}/kommentit/${kommentti.id}" method="POST">
+                    <form action="/tentit/${tentti.id}/kommentit/${kommentti.id}" method="POST"  onsubmit="return confirm('Haluatko varmasti poistaa kommentin?');">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                         <input type="hidden" name="_method" value="DELETE"/>
                         <input type="submit" value="poista kommentti" class="btn"/>
