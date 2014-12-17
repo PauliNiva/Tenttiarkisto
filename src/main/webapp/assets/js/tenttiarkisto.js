@@ -43,6 +43,9 @@ $(window).scroll(function() {
 //lomakevalidaatio
 $('#lomakeform').parsley();
 
+//mallivastausvalidaatio
+$('#mallivastausform').parsley();
+
 window.ParsleyConfig = {
     validators: {
         cantmin: {

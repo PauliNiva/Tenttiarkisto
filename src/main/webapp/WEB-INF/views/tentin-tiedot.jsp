@@ -10,7 +10,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
             <div class="row">
-                <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
                     <a class="tiedot-linkki" href="${tentti.fileURL}">Katso tentti tästä <div class="glyphicon glyphicon-log-in"></div></a><br/><br/>
 
                     <table class="table tiedot">
@@ -18,7 +18,7 @@
                         <tr><td class="tiedot-label">Päivämäärä</td><td class="tiedot-tieto">${tentti.pvm}</td></tr>
                         <tr><td class="tiedot-label">Pitäjä</td><td class="tiedot-tieto">${tentti.pitaja}</td></tr>
                         <tr><td class="tiedot-label">Tyyppi</td><td class="tiedot-tieto">${tentti.tyyppi}</td></tr>
-                        <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>                        
+                        <tr><td class="tiedot-label">Kieli</td><td class="tiedot-tieto">${tentti.kieli}</td></tr>    
                     </table>
 
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -39,6 +39,21 @@
 
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <br/><hr/>
+            <h3>Lisää mallivastaus</h3>
+            <form action="/tentit/${tentti.id}/mallivastaus" method="post" id="mallivastausform">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+                <div><br/><input type="file" name="tiedosto" required /></div>
+                <br/>
+                <div><input class="btn" type="submit" value="Lähetä"/></div>
+            </form>
+
+
+            <br/>
+        </div>
+    </div>                       
     <div class="row kommentit">
         <br/><hr/>
         <h3>Kommentit</h3><br/>
@@ -73,7 +88,7 @@
 
             <br/>
         </div>
-    </div>
+    </div>         
 </div>
 
 <jsp:include page="lomake.jsp" />                    
