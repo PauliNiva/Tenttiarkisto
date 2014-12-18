@@ -1,0 +1,21 @@
+language: java
+notifications:
+  email: false
+  irc:
+    channels:
+    - ircnet.eversible.com#katopari
+    on_success: change
+    use_notice: true
+    skip_join: true
+    template:
+    - '#%{build_number} %{message} (%{branch} : %{author}): %{commit_message}'
+after_success:
+  - mvn clean cobertura:cobertura coveralls:report
+deploy:
+  provider: heroku
+  strategy: git
+  api_key:
+    secure: cSiXvInsBWKaCPV7zKUMDgd6MzJc8C5WYNokeM0YnweejvWD5q1hsZWAwbfLyThzSXiEwVbRnk6hOmEOgltJUlwEH3xHOran0JUrFPWqrc8dSUUXzy1/9+LVAr15SYym7d5AtsNu622qHBb6O3ezDx74d5TDLzFP/oI4haVZhSM=
+  app: tenttiarkisto
+  on:
+    repo: corvidian/tenttiarkisto
