@@ -53,7 +53,7 @@ public class MallivastausService {
     }
     
     @Transactional
-    public Long addTentti(Mallivastaus mallivastaus, InputStream is, long length, String ext) {
+    public Long addMallivastaus(Mallivastaus mallivastaus, InputStream is, long length, String ext) {
         Tentti tentti = mallivastaus.getTentti();
         tentti.getTentinMallivastaukset().add(mallivastaus);
         String fileName = makeFilename(mallivastaus, ext);

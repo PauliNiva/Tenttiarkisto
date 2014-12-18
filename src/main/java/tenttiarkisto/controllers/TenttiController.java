@@ -23,12 +23,14 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import tenttiarkisto.domain.Kieli;
 import tenttiarkisto.domain.Kurssi;
+import tenttiarkisto.domain.Mallivastaus;
 import tenttiarkisto.domain.Tentti;
 import tenttiarkisto.domain.Tyyppi;
 import tenttiarkisto.repo.KieliRepo;
 import tenttiarkisto.repo.TyyppiRepo;
 import tenttiarkisto.service.KommenttiService;
 import tenttiarkisto.service.KurssiService;
+import tenttiarkisto.service.MallivastausService;
 import tenttiarkisto.service.TenttiService;
 
 @Controller
@@ -46,6 +48,9 @@ public class TenttiController {
     
     @Autowired
     KieliRepo kieliRepo;
+    
+    @Autowired
+    MallivastausService mallivastausService;
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String show(Model model, @PathVariable Long id) {
@@ -106,5 +111,18 @@ public class TenttiController {
     public String poistaTentti(@PathVariable Long id) {
         tenttiService.removeTentti(id);
         return "redirect:/kurssit";
+    }
+    
+    @RequestMapping(value = "/{id}/mallivastaus", method = RequestMethod.POST)
+    public String lisaaMallivastaus(@PathVariable Long id, Model model, RedirectAttributes redirectAttributes,
+            @RequestParam("tiedosto") MultipartFile file) throws IOException {
+        Category log = Logger.getInstance(TenttiController.class);
+        log.info("file: " + file.getOriginalFilename());
+        String ext = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf('.') + 1);
+        log.info("ext: " + ext);
+        Mallivastaus mallivastaus = new Mallivastaus(tenttiService.get(id), null);
+        mallivastausService.addMallivastaus(mallivastaus, file.getInputStream(), file.getSize(), ext);
+        redirectAttributes.addAttribute("id", id);
+        return "redirect:/tentit/{id}";
     }
 }

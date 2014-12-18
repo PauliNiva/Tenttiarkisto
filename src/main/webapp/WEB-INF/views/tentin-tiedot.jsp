@@ -43,7 +43,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <br/><hr/>
             <h3>Lisää mallivastaus</h3>
-            <form action="/tentit/${tentti.id}/mallivastaus" method="post" id="mallivastausform">
+            <form action="/tentit/${tentti.id}/mallivastaus" method="post" id="mallivastausform" enctype="multipart/form-data">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                 <div><br/><input type="file" name="tiedosto" required /></div>
                 <br/>
