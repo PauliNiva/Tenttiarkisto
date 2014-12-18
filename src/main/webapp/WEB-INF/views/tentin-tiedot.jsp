@@ -40,16 +40,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+
             <div class="panel-body">
-                  <table class="table tentinMallivastukset" align="center">
+                <table class="table tentinMallivastukset" align="center">
                     <c:forEach var="mallivastaus" items="${tentti.tentinMallivastaukset}">
                         <tr>
-                            <td><a href="/tentit/${tentti.id}/mallivastaus">Katso mallivastaus</a></td>
+                            <td><a class="tiedot-linkki" href="${mallivastaus.fileURL}">Katso mallivastaus tästä <div class="glyphicon glyphicon-log-in"></div></a><br/><br/>
+                            </td>
                         </tr>
                     </c:forEach>
-                  </table>
-              </div>
+                </table>
+            </div>
             <br/><hr/>
             <h3>Lisää mallivastaus</h3>
             <form action="/tentit/${tentti.id}/mallivastaus" method="post" id="mallivastausform" enctype="multipart/form-data">
