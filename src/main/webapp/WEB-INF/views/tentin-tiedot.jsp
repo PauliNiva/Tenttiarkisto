@@ -41,6 +41,15 @@
     </div>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="panel-body">
+                  <table class="table tentinMallivastukset" align="center">
+                    <c:forEach var="mallivastaus" items="${tentti.tentinMallivastaukset}">
+                        <tr>
+                            <td><a href="/tentit/${tentti.id}/mallivastaus">Katso mallivastaus</a></td>
+                        </tr>
+                    </c:forEach>
+                  </table>
+              </div>
             <br/><hr/>
             <h3>Lisää mallivastaus</h3>
             <form action="/tentit/${tentti.id}/mallivastaus" method="post" id="mallivastausform" enctype="multipart/form-data">
